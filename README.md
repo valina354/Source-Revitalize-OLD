@@ -1,0 +1,1 @@
+super duper resource source engine is a source engine branch aimed at making the best source engine, it was originally made for mythic legend interactive and for vertex startos but it cant be used by anyone and has some features such as: pbr,advanced post processing, (maybe pbr) and more!
