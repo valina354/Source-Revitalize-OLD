@@ -1,0 +1,40 @@
+﻿Build started 12/21/2023 8:48:39 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\vstdlib\vstdlib.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\game\bin\.\vstdlib.dll for /f "delims=" %%A in ('attrib "..\..\game\bin\.\vstdlib.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\vstdlib\Release\"vstdlib.dll
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "vstdlib.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       CustomBuild:
+         Compiling pointeroverride.asm
+          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+         Microsoft (R) Macro Assembler Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         Running VPC CRC Check - vstdlib.vpc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=vstdlib /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D VSTDLIB_DLL_EXPORT /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\vstdlib" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw coroutine.cpp cvar.cpp jobthread.cpp KeyValuesSystem.cpp ..\public\tier0\memoverride.cpp osversion.cpp processutils.cpp random.cpp vcover.cpp
+         coroutine.cpp
+         cvar.cpp
+         jobthread.cpp
+         KeyValuesSystem.cpp
+         memoverride.cpp
+         osversion.cpp
+         processutils.cpp
+         random.cpp
+         vcover.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\vstdlib\keyvaluessystem.cpp(114): error C2065: 'UtlStringLessFunc' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\vstdlib\cvar.cpp(727): error C2039: 'GetStringManualCharCount' : is not a member of 'CUtlBuffer'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier1\utlbuffer.h(109) : see declaration of 'CUtlBuffer'
+     1>d:\sourcesdk\map-labs-master\sp\src\vstdlib\keyvaluessystem.cpp(342): error C2660: 'KeyValues::MakeCopy' : function does not take 1 arguments
+     1>d:\sourcesdk\map-labs-master\sp\src\vstdlib\processutils.cpp(137): error C2039: 'GetForModify' : is not a member of 'CUtlString'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier1\utlstring.h(132) : see declaration of 'CUtlString'
+     1>d:\sourcesdk\map-labs-master\sp\src\vstdlib\processutils.cpp(137): error C2660: 'CreateProcessA' : function does not take 9 arguments
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\vstdlib\vstdlib.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.54

@@ -1,0 +1,95 @@
+﻿Build started 12/21/2023 1:37:38 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\tier0\tier0.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\game\bin\.\tier0.dll for /f "delims=" %%A in ('attrib "..\..\game\bin\.\tier0.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\tier0\Release\"tier0.dll
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "tier0.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       CustomBuild:
+         Compiling ETW manifest file
+         '..\DevTools\bin\mc.exe' is not recognized as an internal or external command,
+         operable program or batch file.
+         Compiling pointeroverride.asm
+          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+         Microsoft (R) Macro Assembler Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         Running VPC CRC Check - tier0.vpc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\public\WindowsSDK /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=tier0 /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D TIER0_DLL_EXPORT /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\tier0" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yc"pch_tier0.h" /Fp".\Release\.\/tier0.pch" /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw pch_tier0.cpp
+         pch_tier0.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\public\WindowsSDK /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=tier0 /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D TIER0_DLL_EXPORT /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\tier0" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yu"pch_tier0.h" /Fp".\Release\.\/tier0.pch" /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw assert_dialog.cpp commandline.cpp cpu.cpp cpu_usage.cpp cpumonitoring.cpp dbg.cpp dynfunction.cpp etwprof.cpp fasttimer.cpp mem.cpp mem_helpers.cpp memdbg.cpp memstd.cpp memvalidate.cpp minidump.cpp platform.cpp pme.cpp progressbar.cpp security.cpp stacktools.cpp systeminformation.cpp thread.cpp threadtools.cpp tier0_strtools.cpp tslist.cpp vcrmode.cpp vprof.cpp win32consoleio.cpp
+         assert_dialog.cpp
+         commandline.cpp
+         cpu.cpp
+         cpu_usage.cpp
+         cpumonitoring.cpp
+         dbg.cpp
+         dynfunction.cpp
+         etwprof.cpp
+         fasttimer.cpp
+         mem.cpp
+         mem_helpers.cpp
+         memdbg.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\commandline.cpp(59): error C3668: 'CCommandLine::ParmValueByIndex' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\cpu.cpp(586): error C2039: 'm_nModel' : is not a member of 'CPUInformation'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier0\platform.h(1166) : see declaration of 'CPUInformation'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\cpu.cpp(587): error C2039: 'm_nFeatures' : is not a member of 'CPUInformation'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier0\platform.h(1166) : see declaration of 'CPUInformation'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\cpu.cpp(588): error C2039: 'm_nFeatures' : is not a member of 'CPUInformation'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier0\platform.h(1166) : see declaration of 'CPUInformation'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\cpu.cpp(589): error C2039: 'm_nFeatures' : is not a member of 'CPUInformation'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier0\platform.h(1166) : see declaration of 'CPUInformation'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\mem.cpp(41): error C3861: 'MinidumpUserStreamInfoAppend': identifier not found
+         memstd.cpp
+         memvalidate.cpp
+         minidump.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\etwprof.cpp(38): fatal error C1083: Cannot open include file: 'ValveETWProviderEvents.h': No such file or directory
+         platform.cpp
+         pme.cpp
+         progressbar.cpp
+         security.cpp
+         stacktools.cpp
+         systeminformation.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(33): error C2146: syntax error : missing ';' before identifier 'g_pfnExitProcessWithErrorCB'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(33): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(189): error C2064: term does not evaluate to a function taking 1 arguments
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(207): error C2146: syntax error : missing ')' before identifier 'pfnCB'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(207): error C2182: 'Plat_SetExitProcessWithErrorCB' : illegal use of type 'void'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(207): error C2059: syntax error : ')'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(208): error C2143: syntax error : missing ';' before '{'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(208): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(307): error C2065: 'MemoryInformation' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(307): error C2065: 'pOutMemoryInfo' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(308): error C2448: 'GetMemoryInformation' : function-style initializer appears to be a function definition
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(357): error C2065: 'Plat_WatchDogHandlerFunction_t' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(357): error C2146: syntax error : missing ')' before identifier 'function'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(357): error C2182: 'Plat_SetWatchdogHandlerFunction' : illegal use of type 'void'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(357): error C2059: syntax error : ')'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(358): error C2143: syntax error : missing ';' before '{'
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\platform.cpp(358): error C2447: '{' : missing function header (old-style formal list?)
+         thread.cpp
+         threadtools.cpp
+         tier0_strtools.cpp
+         tslist.cpp
+         vcrmode.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\memstd.cpp(1801): error C3861: 'MemAllocOOMError': identifier not found
+         vprof.cpp
+         win32consoleio.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(118): error C3646: 'g_StackTop' : unknown override specifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(118): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(130): error C2065: 'g_StackTop' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(1502): error C2065: 'g_StackTop' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(1503): error C2065: 'g_StackTop' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(1512): error C2065: 'g_StackTop' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(1554): error C2065: 'g_StackTop' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(1555): error C2065: 'g_StackTop' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\tier0\stacktools.cpp(1564): error C2065: 'g_StackTop' : undeclared identifier
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\tier0\tier0.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.23

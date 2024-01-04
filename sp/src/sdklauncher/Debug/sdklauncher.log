@@ -1,0 +1,88 @@
+﻿Build started 12/23/2023 5:38:19 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\sdklauncher.vcxproj" on node 11 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\game\bin\.\sdklauncher.exe for /f "delims=" %%A in ('attrib "..\..\game\bin\.\sdklauncher.exe"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\Debug\"sdklauncher.exe
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "sdklauncher.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       CustomBuild:
+         Compiling pointeroverride.asm
+          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+         Microsoft (R) Macro Assembler Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         Running VPC CRC Check - SDKLauncher.vpc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\utils\common /ZI /nologo /W4 /WX /MP /Od /Oy- /D _HAS_ITERATOR_DEBUGGING=0 /D WIN32 /D _WIN32 /D _DEBUG /D DEBUG /D _WINDOWS /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D EXENAME=sdklauncher /D _DLL_EXT=.dll /D VERSION_SAFE_STEAM_API_INTERFACES /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MTd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Debug\.\/" /Fd".\Debug\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt  /Gw ..\common\ConfigManager.cpp configs.cpp CreateModWizard.cpp ..\public\filesystem_init.cpp Main.cpp ..\public\tier0\memoverride.cpp min_footprint_files.cpp ModConfigsHelper.cpp ModWizard_CopyFiles.cpp ModWizard_Finished.cpp ModWizard_GetModInfo.cpp ModWizard_Intro.cpp ModWizard_TemplateOptions.cpp ..\public\registry.cpp SDKLauncherDialog.cpp ..\common\SourceAppInfo.cpp ..\public\vgui_controls\vgui_controls.cpp
+         ConfigManager.cpp
+         configs.cpp
+         CreateModWizard.cpp
+         filesystem_init.cpp
+         Main.cpp
+         memoverride.cpp
+         min_footprint_files.cpp
+         ModConfigsHelper.cpp
+         ModWizard_CopyFiles.cpp
+         ModWizard_Finished.cpp
+         ModWizard_GetModInfo.cpp
+         ModWizard_Intro.cpp
+         ModWizard_TemplateOptions.cpp
+         registry.cpp
+         SDKLauncherDialog.cpp
+         SourceAppInfo.cpp
+         vgui_controls.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _USING_V110_SDK71_ /l"1033" /nologo /fo".\Debug\.\Script1.res" Script1.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\.\\sdklauncher.exe" /INCREMENTAL /NOLOGO shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib odbc32.lib odbccp32.lib WS2_32.LIB /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmt /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Debug\.\/sdklauncher.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Debug\.\sdklauncher.lib" /MACHINE:X86 /SAFESEH:NO /NXCOMPAT /ignore:4221 .\Debug\.\\pointeroverride.obj
+         .\Debug\.\Script1.res
+         .\Debug\.\/ConfigManager.obj
+         .\Debug\.\/configs.obj
+         .\Debug\.\/CreateModWizard.obj
+         .\Debug\.\/filesystem_init.obj
+         .\Debug\.\/Main.obj
+         .\Debug\.\/memoverride.obj
+         .\Debug\.\/min_footprint_files.obj
+         .\Debug\.\/ModConfigsHelper.obj
+         .\Debug\.\/ModWizard_CopyFiles.obj
+         .\Debug\.\/ModWizard_Finished.obj
+         .\Debug\.\/ModWizard_GetModInfo.obj
+         .\Debug\.\/ModWizard_Intro.obj
+         .\Debug\.\/ModWizard_TemplateOptions.obj
+         .\Debug\.\/registry.obj
+         .\Debug\.\/SDKLauncherDialog.obj
+         .\Debug\.\/SourceAppInfo.obj
+         .\Debug\.\/vgui_controls.obj
+         ..\lib\public\appframework.lib
+         ..\lib\public\mathlib.lib
+         ..\lib\public\steam_api.lib
+         ..\lib\public\tier0.lib
+         ..\lib\public\tier1.lib
+         ..\lib\public\tier2.lib
+         ..\lib\public\tier3.lib
+         ..\lib\public\vgui_controls.lib
+         ..\lib\public\vstdlib.lib
+            Creating library .\Debug\.\sdklauncher.lib and object .\Debug\.\sdklauncher.exp
+         sdklauncher.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\.\Debug\.\sdklauncher.exe
+       PostBuildEvent:
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\Debug\"sdklauncher.exe ..\..\game\bin\.\sdklauncher.exe >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\Debug\"sdklauncher.map copy "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\Debug\"sdklauncher.map ..\..\game\bin\.\sdklauncher.map >nul
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\Debug\"sdklauncher.pdb ..\..\game\bin\.\sdklauncher.pdb >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for SDKLauncher! EXE or DLL is probably running. ***
+         del /q "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\Debug\"sdklauncher.exe
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\sdklauncher\sdklauncher.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.99

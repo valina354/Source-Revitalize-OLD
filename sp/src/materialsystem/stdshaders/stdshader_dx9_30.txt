@@ -1,0 +1,33 @@
+//
+// vs 3.0   ps 3.0   shaders collection
+//
+//  These shaders are forced to compile as shader model 3.0
+//  using the new compiler.
+//	    _ps30.vcs
+//	    _vs30.vcs
+//
+
+//skydome
+skydome_vs30.fxc
+skydome_ps30.fxc
+
+//screenspace
+screenspace_simple_vs30.fxc
+
+//fxaa
+fxaa_ps30.fxc
+fxaa_vs30.fxc
+
+//pbr
+pbr_ps30.fxc
+pbr_vs30.fxc
+
+//ssao
+ssao_vs30.fxc
+ssao_ps30.fxc
+ssao_combine_vs30.fxc
+ssao_combine_ps30.fxc
+gauss_blur_3x3_ps30.fxc
+gauss_blur_3x3_vs30.fxc
+
+

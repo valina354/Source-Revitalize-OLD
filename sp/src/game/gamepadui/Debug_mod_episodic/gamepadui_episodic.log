@@ -1,0 +1,79 @@
+﻿Build started 12/23/2023 5:38:19 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\gamepadui_episodic.vcxproj" on node 10 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\..\game\mod_episodic\bin\.\gamepadui.dll for /f "delims=" %%A in ('attrib "..\..\..\game\mod_episodic\bin\.\gamepadui.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\Debug_mod_episodic\"gamepadui.dll
+         if exist "..\..\devtools\bin\vpc.exe" "..\..\devtools\bin\vpc.exe" -crc2 "gamepadui_episodic.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I.\ /I..\..\vgui2\include /I..\..\vgui2\controls /I..\..\game\gamepadui /I..\..\public /ZI /nologo /W4 /WX /MP /Od /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D _HAS_ITERATOR_DEBUGGING=0 /D WIN32 /D _WIN32 /D _DEBUG /D DEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=gamepadui /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D GAMEPADUI_DLL /D VERSION_SAFE_STEAM_API_INTERFACES /D strncpy=use_Q_strncpy_instead /D _snprintf=use_Q_snprintf_instead /D GAMEPADUI_GAME_HL2 /D GAMEPADUI_GAME_EPISODIC /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MTd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Debug_mod_episodic\/" /Fd".\Debug_mod_episodic\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /Gw ..\..\common\language.cpp ..\..\public\tier0\memoverride.cpp ..\..\public\vgui_controls\vgui_controls.cpp gamepadui_achievements.cpp gamepadui_basepanel.cpp gamepadui_button.cpp gamepadui_frame.cpp gamepadui_genericconfirmation.cpp gamepadui_interface.cpp gamepadui_mainmenu.cpp gamepadui_newgame.cpp gamepadui_options.cpp gamepadui_savegame.cpp gamepadui_util.cpp
+         language.cpp
+         memoverride.cpp
+         vgui_controls.cpp
+         gamepadui_achievements.cpp
+         gamepadui_basepanel.cpp
+         gamepadui_button.cpp
+         gamepadui_frame.cpp
+         gamepadui_genericconfirmation.cpp
+         gamepadui_interface.cpp
+         gamepadui_mainmenu.cpp
+         gamepadui_newgame.cpp
+         gamepadui_options.cpp
+         gamepadui_savegame.cpp
+         gamepadui_util.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug_mod_episodic\\gamepadui.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\..\lib\common\. /LIBPATH:..\..\lib\public\. shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib winmm.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmt /MANIFEST:NO /DEBUG /PDB:".\Debug_mod_episodic\/gamepadui.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /MACHINE:X86 /SAFESEH:NO  /ignore:4221 /DLL .\Debug_mod_episodic\\pointeroverride.obj
+         .\Debug_mod_episodic\/gamepadui_achievements.obj
+         .\Debug_mod_episodic\/gamepadui_basepanel.obj
+         .\Debug_mod_episodic\/gamepadui_button.obj
+         .\Debug_mod_episodic\/gamepadui_frame.obj
+         .\Debug_mod_episodic\/gamepadui_genericconfirmation.obj
+         .\Debug_mod_episodic\/gamepadui_interface.obj
+         .\Debug_mod_episodic\/gamepadui_mainmenu.obj
+         .\Debug_mod_episodic\/gamepadui_newgame.obj
+         .\Debug_mod_episodic\/gamepadui_options.obj
+         .\Debug_mod_episodic\/gamepadui_savegame.obj
+         .\Debug_mod_episodic\/gamepadui_util.obj
+         .\Debug_mod_episodic\/memoverride.obj
+         .\Debug_mod_episodic\/language.obj
+         .\Debug_mod_episodic\/vgui_controls.obj
+         ..\..\lib\public\bitmap.lib
+         ..\..\lib\public\choreoobjects.lib
+         ..\..\lib\common\libcurl.lib
+         ..\..\lib\public\libz.lib
+         ..\..\lib\public\mathlib.lib
+         ..\..\lib\public\matsys_controls.lib
+         ..\..\lib\public\tier0.lib
+         ..\..\lib\public\tier1.lib
+         ..\..\lib\public\tier2.lib
+         ..\..\lib\public\tier3.lib
+         ..\..\lib\public\vgui_controls.lib
+         ..\..\lib\public\vstdlib.lib
+         ..\..\lib\public\vtf.lib
+            Creating library .\Debug_mod_episodic\\gamepadui.lib and object .\Debug_mod_episodic\\gamepadui.exp
+         gamepadui_episodic.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\.\Debug_mod_episodic\gamepadui.dll
+       PostBuildEvent:
+         if not exist "..\..\..\game\mod_episodic\bin\." mkdir "..\..\..\game\mod_episodic\bin\."
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\Debug_mod_episodic\gamepadui.dll" "..\..\..\game\mod_episodic\bin\.\gamepadui.dll"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\Debug_mod_episodic\gamepadui.map" copy "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\Debug_mod_episodic\gamepadui.map" ..\..\..\game\mod_episodic\bin\.\gamepadui.map
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\Debug_mod_episodic\gamepadui.pdb" "..\..\..\game\mod_episodic\bin\.\gamepadui.pdb"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for GamepadUI (Episodic)! EXE or DLL is probably running. ***
+         del /q "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\Debug_mod_episodic\gamepadui.dll"
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+                 1 file(s) copied.
+                 1 file(s) copied.
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\game\gamepadui\gamepadui_episodic.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.87

@@ -1,0 +1,86 @@
+﻿Build started 1/2/2024 11:08:16 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\movieobjects.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\lib\public\.\movieobjects.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\movieobjects.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\.\movieobjects.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\.\movieobjects.lib
+             attrib +r ..\lib\public\.\movieobjects.lib
+         )
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "movieobjects.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Z7 /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=movieobjects /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MOVIEOBJECTS_LIB /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\movieobjects" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /d2Zi+ /Gw ..\public\bone_setup.cpp
+         bone_setup.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\movieobjects.lib" /NOLOGO  /ignore:4221 .\Release\.\/bone_setup.obj
+         .\Release\.\/collisionutils.obj
+         .\Release\.\/phonemeconverter.obj
+         .\Release\.\/studio.obj
+         .\Release\.\/dmeanimationlist.obj
+         .\Release\.\/dmeanimationset.obj
+         .\Release\.\/dmeattachment.obj
+         .\Release\.\/dmebalancetostereocalculatoroperator.obj
+         .\Release\.\/dmebookmark.obj
+         .\Release\.\/dmecamera.obj
+         .\Release\.\/dmechannel.obj
+         .\Release\.\/dmeclip.obj
+         .\Release\.\/dmecombinationoperator.obj
+         .\Release\.\/dmedag.obj
+         .\Release\.\/dmedccmakefile.obj
+         .\Release\.\/dmedrawsettings.obj
+         .\Release\.\/dmeeditortypedictionary.obj
+         .\Release\.\/dmeexpressionoperator.obj
+         .\Release\.\/dmeeyeball.obj
+         .\Release\.\/dmeeyeposition.obj
+         .\Release\.\/dmefaceset.obj
+         .\Release\.\/dmegamemodel.obj
+         .\Release\.\/dmegamemodelinput.obj
+         .\Release\.\/dmeinput.obj
+         .\Release\.\/dmejoint.obj
+         .\Release\.\/dmekeyboardinput.obj
+         .\Release\.\/dmelight.obj
+         .\Release\.\/dmelog.obj
+         .\Release\.\/dmemakefile.obj
+         .\Release\.\/dmemakefileutils.obj
+         .\Release\.\/dmematerial.obj
+         .\Release\.\/dmematerialoverlayfxclip.obj
+         .\Release\.\/dmemdl.obj
+         .\Release\.\/dmemdlmakefile.obj
+         .\Release\.\/dmemesh.obj
+         .\Release\.\/dmemodel.obj
+         .\Release\.\/dmemorphoperator.obj
+         .\Release\.\/dmemouseinput.obj
+         .\Release\.\/dmeoperator.obj
+         .\Release\.\/dmepackoperators.obj
+         .\Release\.\/dmeparticlesystemdefinition.obj
+         .\Release\.\/dmephonememapping.obj
+         .\Release\.\/dmeselection.obj
+         .\Release\.\/dmeshape.obj
+         .\Release\.\/dmesound.obj
+         .\Release\.\/dmetimeframe.obj
+         .\Release\.\/dmetimeselection.obj
+         .\Release\.\/dmetrack.obj
+         .\Release\.\/dmetrackgroup.obj
+         .\Release\.\/dmetransform.obj
+         .\Release\.\/dmetransforminput.obj
+         .\Release\.\/dmetransformlist.obj
+         .\Release\.\/dmetransformoperator.obj
+         .\Release\.\/dmeunpackoperators.obj
+         .\Release\.\/dmevertexdata.obj
+         .\Release\.\/dmmeshcomp.obj
+         .\Release\.\/dmmeshutils.obj
+         .\Release\.\/dmobjserializer.obj
+         .\Release\.\/dmsmdserializer.obj
+         .\Release\.\/movieobjects_interfaces.obj
+         .\Release\.\/timeutils.obj
+         movieobjects.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\..\lib\public\.\movieobjects.lib
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\movieobjects.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.43

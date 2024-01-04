@@ -1,0 +1,34 @@
+﻿Build started 12/23/2023 5:37:53 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects\sfmobjects.vcxproj" on node 11 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\lib\public\.\sfmobjects.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\sfmobjects.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\.\sfmobjects.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\.\sfmobjects.lib
+             attrib +r ..\lib\public\.\sfmobjects.lib
+         )
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "sfmobjects.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /ZI /nologo /W4 /WX /MP /Od /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D _HAS_ITERATOR_DEBUGGING=0 /D WIN32 /D _WIN32 /D _DEBUG /D DEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=sfmobjects /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D SFMOBJECTS_LIB /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MTd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Debug\.\/" /Fd".\Debug\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt  /Gw exportfacialanimation.cpp flexcontrolbuilder.cpp sfmanimationsetutils.cpp sfmphonemeextractor.cpp sfmsession.cpp
+         exportfacialanimation.cpp
+         flexcontrolbuilder.cpp
+         sfmanimationsetutils.cpp
+         sfmphonemeextractor.cpp
+         sfmsession.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\sfmobjects.lib" /NOLOGO  /ignore:4221 .\Debug\.\/exportfacialanimation.obj
+         .\Debug\.\/flexcontrolbuilder.obj
+         .\Debug\.\/sfmanimationsetutils.obj
+         .\Debug\.\/sfmphonemeextractor.obj
+         .\Debug\.\/sfmsession.obj
+         sfmobjects.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects\..\lib\public\.\sfmobjects.lib
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects\sfmobjects.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:11.91

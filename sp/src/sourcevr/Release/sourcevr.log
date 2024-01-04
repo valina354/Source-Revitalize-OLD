@@ -1,0 +1,61 @@
+﻿Build started 12/26/2023 8:57:02 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\sourcevr.vcxproj" on node 3 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\game\bin\.\sourcevr.dll for /f "delims=" %%A in ('attrib "..\..\game\bin\.\sourcevr.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\Release\"sourcevr.dll
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "sourcevr.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       CustomBuild:
+         Compiling pointeroverride.asm
+          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+         Microsoft (R) Macro Assembler Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=sourcevr /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D SOURCEVR_DLL /D VERSION_SAFE_STEAM_API_INTERFACES /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\sourcevr" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yc"cbase.h" /Fp".\Release\.\/sourcevr.pch" /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw ..\sourcevr\stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=sourcevr /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D SOURCEVR_DLL /D VERSION_SAFE_STEAM_API_INTERFACES /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\sourcevr" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw ..\public\tier0\memoverride.cpp
+         memoverride.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=sourcevr /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D SOURCEVR_DLL /D VERSION_SAFE_STEAM_API_INTERFACES /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\sourcevr" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yu"cbase.h" /Fp".\Release\.\/sourcevr.pch" /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw ..\sourcevr\sourcevirtualreality.cpp
+         sourcevirtualreality.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\.\\sourcevr.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\lib\common\. /LIBPATH:..\lib\public\. shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /MANIFEST:NO /DEBUG /PDB:".\Release\.\/sourcevr.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /MACHINE:X86 /SAFESEH:NO  /ignore:4221 /DLL .\Release\.\\pointeroverride.obj
+         .\Release\.\/memoverride.obj
+         .\Release\.\/sourcevirtualreality.obj
+         .\Release\.\/stdafx.obj
+         ..\lib\public\appframework.lib
+         ..\lib\public\mathlib.lib
+         ..\lib\public\openvr_api.lib
+         ..\lib\public\steam_api.lib
+         ..\lib\public\tier0.lib
+         ..\lib\public\tier1.lib
+         ..\lib\public\tier2.lib
+         ..\lib\public\tier3.lib
+         ..\lib\public\vstdlib.lib
+            Creating library .\Release\.\\sourcevr.lib and object .\Release\.\\sourcevr.exp
+         sourcevr.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\.\Release\.\sourcevr.dll
+       PostBuildEvent:
+         if not exist "..\..\game\bin\." mkdir "..\..\game\bin\."
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\Release\sourcevr.dll" "..\..\game\bin\.\sourcevr.dll"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\Release\sourcevr.map" copy "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\Release\sourcevr.map" ..\..\game\bin\.\sourcevr.map
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\Release\sourcevr.pdb" "..\..\game\bin\.\sourcevr.pdb"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for SourceVR! EXE or DLL is probably running. ***
+         del /q "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\Release\sourcevr.dll"
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+                 1 file(s) copied.
+                 1 file(s) copied.
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\sourcevr\sourcevr.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.25

@@ -1,0 +1,145 @@
+﻿Build started 12/23/2023 5:37:53 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\movieobjects.vcxproj" on node 10 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\lib\public\.\movieobjects.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\movieobjects.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\.\movieobjects.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\.\movieobjects.lib
+             attrib +r ..\lib\public\.\movieobjects.lib
+         )
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "movieobjects.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /ZI /nologo /W4 /WX /MP /Od /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D _HAS_ITERATOR_DEBUGGING=0 /D WIN32 /D _WIN32 /D _DEBUG /D DEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=movieobjects /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MOVIEOBJECTS_LIB /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\movieobjects" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MTd /GS /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Debug\.\/" /Fd".\Debug\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt  /Gw ..\common\movieobjects\timeutils.cpp ..\public\bone_setup.cpp ..\public\collisionutils.cpp ..\public\studio.cpp dmeanimationlist.cpp dmeanimationset.cpp dmeattachment.cpp dmebalancetostereocalculatoroperator.cpp dmebookmark.cpp dmecamera.cpp dmechannel.cpp dmeclip.cpp dmecombinationoperator.cpp dmedag.cpp dmedccmakefile.cpp dmedrawsettings.cpp dmeeditortypedictionary.cpp dmeexpressionoperator.cpp dmeeyeball.cpp dmeeyeposition.cpp dmefaceset.cpp dmegamemodel.cpp dmegamemodelinput.cpp dmeinput.cpp dmejoint.cpp dmekeyboardinput.cpp dmelight.cpp dmelog.cpp dmemakefile.cpp dmemakefileutils.cpp dmematerial.cpp dmematerialoverlayfxclip.cpp dmemdl.cpp dmemdlmakefile.cpp dmemesh.cpp dmemodel.cpp dmemorphoperator.cpp dmemouseinput.cpp dmeoperator.cpp dmepackoperators.cpp dmeparticlesystemdefinition.cpp dmephonememapping.cpp dmeselection.cpp dmeshape.cpp dmesound.cpp dmetimeframe.cpp dmetimeselection.cpp dmetrack.cpp dmetrackgroup.cpp dmetransform.cpp dmetransforminput.cpp dmetransformlist.cpp dmetransformoperator.cpp dmeunpackoperators.cpp dmevertexdata.cpp dmmeshcomp.cpp dmmeshutils.cpp dmobjserializer.cpp dmsmdserializer.cpp movieobjects_interfaces.cpp
+         timeutils.cpp
+         bone_setup.cpp
+         collisionutils.cpp
+         studio.cpp
+         dmeanimationlist.cpp
+         dmeanimationset.cpp
+         dmeattachment.cpp
+         dmebalancetostereocalculatoroperator.cpp
+         dmebookmark.cpp
+         dmecamera.cpp
+         dmechannel.cpp
+         dmeclip.cpp
+         dmecombinationoperator.cpp
+         dmedag.cpp
+         dmedccmakefile.cpp
+         dmedrawsettings.cpp
+         dmeeditortypedictionary.cpp
+         dmeexpressionoperator.cpp
+         dmeeyeball.cpp
+         dmeeyeposition.cpp
+         dmefaceset.cpp
+         dmegamemodel.cpp
+         dmegamemodelinput.cpp
+         dmeinput.cpp
+         dmejoint.cpp
+         dmekeyboardinput.cpp
+         dmelight.cpp
+         dmelog.cpp
+         dmemakefile.cpp
+         dmemakefileutils.cpp
+         dmematerial.cpp
+         dmematerialoverlayfxclip.cpp
+         dmemdl.cpp
+         dmemdlmakefile.cpp
+         dmemesh.cpp
+         dmemodel.cpp
+         dmemorphoperator.cpp
+         dmemouseinput.cpp
+         dmeoperator.cpp
+         dmepackoperators.cpp
+         dmeparticlesystemdefinition.cpp
+         dmephonememapping.cpp
+         dmeselection.cpp
+         dmeshape.cpp
+         dmesound.cpp
+         dmetimeframe.cpp
+         dmetimeselection.cpp
+         dmetrack.cpp
+         dmetrackgroup.cpp
+         dmetransform.cpp
+         dmetransforminput.cpp
+         dmetransformlist.cpp
+         dmetransformoperator.cpp
+         dmeunpackoperators.cpp
+         dmevertexdata.cpp
+         dmmeshcomp.cpp
+         dmmeshutils.cpp
+         dmobjserializer.cpp
+         dmsmdserializer.cpp
+         movieobjects_interfaces.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\movieobjects.lib" /NOLOGO  /ignore:4221 .\Debug\.\/bone_setup.obj
+         .\Debug\.\/collisionutils.obj
+         .\Debug\.\/phonemeconverter.obj
+         .\Debug\.\/studio.obj
+         .\Debug\.\/dmeanimationlist.obj
+         .\Debug\.\/dmeanimationset.obj
+         .\Debug\.\/dmeattachment.obj
+         .\Debug\.\/dmebalancetostereocalculatoroperator.obj
+         .\Debug\.\/dmebookmark.obj
+         .\Debug\.\/dmecamera.obj
+         .\Debug\.\/dmechannel.obj
+         .\Debug\.\/dmeclip.obj
+         .\Debug\.\/dmecombinationoperator.obj
+         .\Debug\.\/dmedag.obj
+         .\Debug\.\/dmedccmakefile.obj
+         .\Debug\.\/dmedrawsettings.obj
+         .\Debug\.\/dmeeditortypedictionary.obj
+         .\Debug\.\/dmeexpressionoperator.obj
+         .\Debug\.\/dmeeyeball.obj
+         .\Debug\.\/dmeeyeposition.obj
+         .\Debug\.\/dmefaceset.obj
+         .\Debug\.\/dmegamemodel.obj
+         .\Debug\.\/dmegamemodelinput.obj
+         .\Debug\.\/dmeinput.obj
+         .\Debug\.\/dmejoint.obj
+         .\Debug\.\/dmekeyboardinput.obj
+         .\Debug\.\/dmelight.obj
+         .\Debug\.\/dmelog.obj
+         .\Debug\.\/dmemakefile.obj
+         .\Debug\.\/dmemakefileutils.obj
+         .\Debug\.\/dmematerial.obj
+         .\Debug\.\/dmematerialoverlayfxclip.obj
+         .\Debug\.\/dmemdl.obj
+         .\Debug\.\/dmemdlmakefile.obj
+         .\Debug\.\/dmemesh.obj
+         .\Debug\.\/dmemodel.obj
+         .\Debug\.\/dmemorphoperator.obj
+         .\Debug\.\/dmemouseinput.obj
+         .\Debug\.\/dmeoperator.obj
+         .\Debug\.\/dmepackoperators.obj
+         .\Debug\.\/dmeparticlesystemdefinition.obj
+         .\Debug\.\/dmephonememapping.obj
+         .\Debug\.\/dmeselection.obj
+         .\Debug\.\/dmeshape.obj
+         .\Debug\.\/dmesound.obj
+         .\Debug\.\/dmetimeframe.obj
+         .\Debug\.\/dmetimeselection.obj
+         .\Debug\.\/dmetrack.obj
+         .\Debug\.\/dmetrackgroup.obj
+         .\Debug\.\/dmetransform.obj
+         .\Debug\.\/dmetransforminput.obj
+         .\Debug\.\/dmetransformlist.obj
+         .\Debug\.\/dmetransformoperator.obj
+         .\Debug\.\/dmeunpackoperators.obj
+         .\Debug\.\/dmevertexdata.obj
+         .\Debug\.\/dmmeshcomp.obj
+         .\Debug\.\/dmmeshutils.obj
+         .\Debug\.\/dmobjserializer.obj
+         .\Debug\.\/dmsmdserializer.obj
+         .\Debug\.\/movieobjects_interfaces.obj
+         .\Debug\.\/timeutils.obj
+         movieobjects.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\..\lib\public\.\movieobjects.lib
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\movieobjects.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:24.91

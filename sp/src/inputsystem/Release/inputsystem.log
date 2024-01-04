@@ -1,0 +1,385 @@
+﻿Build started 12/21/2023 1:44:34 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\inputsystem\inputsystem.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\game\bin\.\inputsystem.dll for /f "delims=" %%A in ('attrib "..\..\game\bin\.\inputsystem.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\inputsystem\Release\"inputsystem.dll
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "inputsystem.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       CustomBuild:
+         Compiling pointeroverride.asm
+          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+         Microsoft (R) Macro Assembler Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         Running VPC CRC Check - inputsystem.vpc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /I..\thirdparty\SDL2 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=inputsystem /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D VERSION_SAFE_STEAM_API_INTERFACES /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\inputsystem" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw inputsystem.cpp joystick_sdl.cpp key_translation.cpp ..\public\tier0\memoverride.cpp novint.cpp steamcontroller.cpp
+         inputsystem.cpp
+         joystick_sdl.cpp
+         key_translation.cpp
+         memoverride.cpp
+         novint.cpp
+         steamcontroller.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(32): error C2065: 'SK_MAX_KEYS' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(456): error C2338: Compile time assert constraint is not true: sizeof(s_pButtonCodeName) / sizeof( const char * ) == BUTTON_CODE_LAST
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(607): error C2065: 'SK_NULL' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(608): error C2065: 'SK_BUTTON_A' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(608): error C2065: 'STEAMCONTROLLER_A' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(609): error C2065: 'SK_BUTTON_B' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(609): error C2065: 'STEAMCONTROLLER_B' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(610): error C2065: 'SK_BUTTON_X' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(610): error C2065: 'STEAMCONTROLLER_X' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(611): error C2065: 'SK_BUTTON_Y' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(611): error C2065: 'STEAMCONTROLLER_Y' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(612): error C2065: 'SK_BUTTON_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(612): error C2065: 'STEAMCONTROLLER_DPAD_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(613): error C2065: 'SK_BUTTON_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(613): error C2065: 'STEAMCONTROLLER_DPAD_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(614): error C2065: 'SK_BUTTON_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(614): error C2065: 'STEAMCONTROLLER_DPAD_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(615): error C2065: 'SK_BUTTON_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(615): error C2065: 'STEAMCONTROLLER_DPAD_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(616): error C2065: 'SK_BUTTON_LEFT_BUMPER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(616): error C2065: 'STEAMCONTROLLER_LEFT_BUMPER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(617): error C2065: 'SK_BUTTON_RIGHT_BUMPER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(617): error C2065: 'STEAMCONTROLLER_RIGHT_BUMPER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(618): error C2065: 'SK_BUTTON_LEFT_TRIGGER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(618): error C2065: 'STEAMCONTROLLER_LEFT_TRIGGER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(619): error C2065: 'SK_BUTTON_RIGHT_TRIGGER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(619): error C2065: 'STEAMCONTROLLER_RIGHT_TRIGGER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(620): error C2065: 'SK_BUTTON_LEFT_GRIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(620): error C2065: 'STEAMCONTROLLER_LEFT_GRIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(621): error C2065: 'SK_BUTTON_RIGHT_GRIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(621): error C2065: 'STEAMCONTROLLER_RIGHT_GRIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(622): error C2065: 'SK_BUTTON_LPAD_TOUCH' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(622): error C2065: 'STEAMCONTROLLER_LEFT_PAD_FINGERDOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(623): error C2065: 'SK_BUTTON_RPAD_TOUCH' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(623): error C2065: 'STEAMCONTROLLER_RIGHT_PAD_FINGERDOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(624): error C2065: 'SK_BUTTON_LPAD_CLICK' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(624): error C2065: 'STEAMCONTROLLER_LEFT_PAD_CLICK' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(625): error C2065: 'SK_BUTTON_RPAD_CLICK' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(625): error C2065: 'STEAMCONTROLLER_RIGHT_PAD_CLICK' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(626): error C2065: 'SK_BUTTON_LPAD_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(626): error C2065: 'STEAMCONTROLLER_LEFT_PAD_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(627): error C2065: 'SK_BUTTON_LPAD_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(627): error C2065: 'STEAMCONTROLLER_LEFT_PAD_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(628): error C2065: 'SK_BUTTON_LPAD_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(628): error C2065: 'STEAMCONTROLLER_LEFT_PAD_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(629): error C2065: 'SK_BUTTON_LPAD_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(629): error C2065: 'STEAMCONTROLLER_LEFT_PAD_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(630): error C2065: 'SK_BUTTON_RPAD_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(630): error C2065: 'STEAMCONTROLLER_RIGHT_PAD_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(631): error C2065: 'SK_BUTTON_RPAD_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(631): error C2065: 'STEAMCONTROLLER_RIGHT_PAD_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(632): error C2065: 'SK_BUTTON_RPAD_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(632): error C2065: 'STEAMCONTROLLER_RIGHT_PAD_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(633): error C2065: 'SK_BUTTON_RPAD_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(633): error C2065: 'STEAMCONTROLLER_RIGHT_PAD_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(634): error C2065: 'SK_BUTTON_SELECT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(634): error C2065: 'STEAMCONTROLLER_SELECT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(635): error C2065: 'SK_BUTTON_START' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(635): error C2065: 'STEAMCONTROLLER_START' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(636): error C2065: 'SK_BUTTON_STEAM' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(636): error C2065: 'STEAMCONTROLLER_STEAM' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(637): error C2065: 'SK_BUTTON_INACTIVE_START' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(637): error C2065: 'STEAMCONTROLLER_INACTIVE_START' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(641): error C2065: 'SK_VBUTTON_F1' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(641): error C2065: 'STEAMCONTROLLER_F1' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(642): error C2065: 'SK_VBUTTON_F2' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(642): error C2065: 'STEAMCONTROLLER_F2' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(643): error C2065: 'SK_VBUTTON_F3' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(643): error C2065: 'STEAMCONTROLLER_F3' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(644): error C2065: 'SK_VBUTTON_F4' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(644): error C2065: 'STEAMCONTROLLER_F4' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(645): error C2065: 'SK_VBUTTON_F5' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(645): error C2065: 'STEAMCONTROLLER_F5' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(646): error C2065: 'SK_VBUTTON_F6' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(646): error C2065: 'STEAMCONTROLLER_F6' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(647): error C2065: 'SK_VBUTTON_F7' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(647): error C2065: 'STEAMCONTROLLER_F7' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(648): error C2065: 'SK_VBUTTON_F8' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(648): error C2065: 'STEAMCONTROLLER_F8' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(649): error C2065: 'SK_VBUTTON_F9' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(649): error C2065: 'STEAMCONTROLLER_F9' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(650): error C2065: 'SK_VBUTTON_F10' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(650): error C2065: 'STEAMCONTROLLER_F10' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(651): error C2065: 'SK_VBUTTON_F11' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(651): error C2065: 'STEAMCONTROLLER_F11' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(652): error C2065: 'SK_VBUTTON_F12' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(652): error C2065: 'STEAMCONTROLLER_F12' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(772): error C3861: 'IsSteamControllerButtonCode': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(774): error C2065: 'STEAMCONTROLLER_FIRST_BUTTON' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(775): error C3861: 'STEAMCONTROLLER_BUTTON': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(778): error C3861: 'IsSteamControllerAxisCode': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(780): error C2065: 'STEAMCONTROLLER_FIRST_AXIS_BUTTON' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\key_translation.cpp(781): error C3861: 'STEAMCONTROLLER_AXIS_BUTTON': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(329): error C2061: syntax error : identifier 'sKey_t' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(329): error C2061: syntax error : identifier 'sKey_t' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(330): error C2061: syntax error : identifier 'ESteamPadAxis' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(329): error C2061: syntax error : identifier 'sKey_t' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(330): error C2061: syntax error : identifier 'ESteamPadAxis' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(333): error C2061: syntax error : identifier 'GameActionSet_t' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(330): error C2061: syntax error : identifier 'ESteamPadAxis' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(333): error C2061: syntax error : identifier 'GameActionSet_t' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(333): error C2061: syntax error : identifier 'GameActionSet_t' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2061: syntax error : identifier 'GameActionSet_t' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2061: syntax error : identifier 'GameActionSet_t' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2061: syntax error : identifier 'GameActionSet_t' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2061: syntax error : identifier 'GameActionSet_t' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2061: syntax error : identifier 'GameActionSet_t' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2061: syntax error : identifier 'GameActionSet_t' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(329): error C2061: syntax error : identifier 'sKey_t' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(330): error C2061: syntax error : identifier 'ESteamPadAxis' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(333): error C2061: syntax error : identifier 'GameActionSet_t' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2061: syntax error : identifier 'ControllerActionSetHandle_t' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2061: syntax error : identifier 'ControllerActionSetHandle_t' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2061: syntax error : identifier 'ControllerActionSetHandle_t' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2535: 'int CInputSystem::GetSteamControllerActionOrigin(const char *)' : member function already defined or declared (novint.cpp)
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343) : see declaration of 'CInputSystem::GetSteamControllerActionOrigin'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2535: 'int CInputSystem::GetSteamControllerActionOrigin(const char *)' : member function already defined or declared (inputsystem.cpp)
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343) : see declaration of 'CInputSystem::GetSteamControllerActionOrigin'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): error C2061: syntax error : identifier 'GameActionSet_t' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2535: 'int CInputSystem::GetSteamControllerActionOrigin(const char *)' : member function already defined or declared (joystick_sdl.cpp)
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343) : see declaration of 'CInputSystem::GetSteamControllerActionOrigin'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(347): error C2061: syntax error : identifier 'EControllerActionOrigin' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(347): error C2061: syntax error : identifier 'EControllerActionOrigin' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(334): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(351): error C2061: syntax error : identifier 'EControllerActionOrigin' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(347): error C2061: syntax error : identifier 'EControllerActionOrigin' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(351): error C2061: syntax error : identifier 'EControllerActionOrigin' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C2146: syntax error : missing ';' before identifier 'GetActionSetHandle' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2146: syntax error : missing ';' before identifier 'm_currentActionSet' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(351): error C2061: syntax error : identifier 'EControllerActionOrigin' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2146: syntax error : missing ';' before identifier 'm_currentActionSet' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2146: syntax error : missing ';' before identifier 'm_currentActionSet' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(335): warning C4183: 'GetActionSetHandle': missing return type; assumed to be a member function returning 'int' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2146: syntax error : missing ';' before identifier 'lastAnalogKeys' (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2146: syntax error : missing ';' before identifier 'lastAnalogKeys' (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2146: syntax error : missing ';' before identifier 'lastAnalogKeys' (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2065: 'MAX_STEAMPADAXIS' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2065: 'MAX_STEAMPADAXIS' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): error C2061: syntax error : identifier 'GameActionSet_t' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2065: 'MAX_STEAMPADAXIS' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(410): error C2065: 'SK_MAX_KEYS' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(410): error C2065: 'SK_MAX_KEYS' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(421): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(410): error C2065: 'SK_MAX_KEYS' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(421): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2146: syntax error : missing ';' before identifier 'GetSteamControllerActionOrigin' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(422): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(421): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(422): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2433: 'CInputSystem::EControllerActionOrigin' : 'virtual' not permitted on data declarations (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(422): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): warning C4200: nonstandard extension used : zero-sized array in struct/union (novint.cpp)
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): warning C4200: nonstandard extension used : zero-sized array in struct/union (inputsystem.cpp)
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2061: syntax error : identifier 'ControllerActionSetHandle_t' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(428): error C2229: class 'CInputSystem' has an illegal zero-sized array (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): warning C4200: nonstandard extension used : zero-sized array in struct/union (joystick_sdl.cpp)
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(428): error C2229: class 'CInputSystem' has an illegal zero-sized array (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2065: 'lastAnalogKeys' : undeclared identifier (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(428): error C2229: class 'CInputSystem' has an illegal zero-sized array (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2065: 'lastAnalogKeys' : undeclared identifier (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): error C2535: 'int CInputSystem::GetSteamControllerActionOrigin(const char *)' : member function already defined or declared (steamcontroller.cpp)
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(343) : see declaration of 'CInputSystem::GetSteamControllerActionOrigin'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2065: 'lastAnalogKeys' : undeclared identifier (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(344): warning C4183: 'GetSteamControllerActionOrigin': missing return type; assumed to be a member function returning 'int' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2070: 'unknown-type': illegal sizeof operand (novint.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2070: 'unknown-type': illegal sizeof operand (inputsystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(347): error C2061: syntax error : identifier 'EControllerActionOrigin' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2070: 'unknown-type': illegal sizeof operand (joystick_sdl.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(351): error C2061: syntax error : identifier 'EControllerActionOrigin' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2146: syntax error : missing ';' before identifier 'm_currentActionSet' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\joystick_sdl.cpp(12): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(379): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.cpp(155): error C2660: 'ISteamController::Init' : function does not take 0 arguments
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2146: syntax error : missing ';' before identifier 'lastAnalogKeys' (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.cpp(160): error C2065: 'GAME_ACTION_SET_MENUCONTROLS' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.cpp(160): error C3861: 'ActivateSteamControllerActionSet': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(409): error C2065: 'MAX_STEAMPADAXIS' : undeclared identifier (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(410): error C2065: 'SK_MAX_KEYS' : undeclared identifier (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(421): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (steamcontroller.cpp)
+     1>c1xx : fatal error C1903: unable to recover from previous error(s); stopping compilation
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(422): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(426): warning C4200: nonstandard extension used : zero-sized array in struct/union (steamcontroller.cpp)
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(428): error C2229: class 'CInputSystem' has an illegal zero-sized array (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2065: 'lastAnalogKeys' : undeclared identifier (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\inputsystem.h(405): error C2070: 'unknown-type': illegal sizeof operand (steamcontroller.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(83): error C2146: syntax error : missing ';' before identifier 'handle'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(83): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(84): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(85): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(89): error C2065: 'STEAMCONTROLLER_DPAD_LEFT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(90): error C2065: 'STEAMCONTROLLER_DPAD_RIGHT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(91): error C2065: 'STEAMCONTROLLER_DPAD_UP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(92): error C2065: 'STEAMCONTROLLER_DPAD_DOWN' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(93): error C2065: 'STEAMCONTROLLER_B' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(94): error C2065: 'STEAMCONTROLLER_A' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(95): error C2065: 'STEAMCONTROLLER_START' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(96): error C2065: 'STEAMCONTROLLER_F1' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(97): error C2065: 'STEAMCONTROLLER_F2' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(98): error C2065: 'STEAMCONTROLLER_Y' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(99): error C2065: 'STEAMCONTROLLER_X' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(100): error C2065: 'STEAMCONTROLLER_START' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(101): error C2065: 'STEAMCONTROLLER_F4' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(102): error C2078: too many initializers
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(108): error C2146: syntax error : missing ';' before identifier 'handle'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(108): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(114): error C2146: syntax error : missing ';' before identifier 'eGameActionSet'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(114): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(115): error C2146: syntax error : missing ';' before identifier 'handle'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(115): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(118): error C2065: 'GAME_ACTION_SET_MENUCONTROLS' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(119): error C2065: 'GAME_ACTION_SET_FPSCONTROLS' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(120): error C2065: 'GAME_ACTION_SET_IN_GAME_HUD' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(121): error C2065: 'GAME_ACTION_SET_SPECTATOR' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(122): error C2078: too many initializers
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(217): error C2039: 'SteamControllerInterface' : is not a member of 'IInputSystem'
+                 d:\sourcesdk\map-labs-master\sp\src\public\inputsystem\iinputsystem.h(24) : see declaration of 'IInputSystem'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(218): error C3536: 'psteamcontroller': cannot be used before it is initialized
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(227): error C2039: 'handle' : is not a member of 'SDigitalMenuAction'
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(80) : see declaration of 'SDigitalMenuAction'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(227): error C3536: 'psteamcontroller': cannot be used before it is initialized
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(227): error C2227: left of '->GetDigitalActionHandle' must point to class/struct/union/generic type
+                 type is 'int'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(228): error C2039: 'handle' : is not a member of 'SDigitalMenuAction'
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(80) : see declaration of 'SDigitalMenuAction'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(231): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(239): error C2039: 'handle' : is not a member of 'SGameActionSet'
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(112) : see declaration of 'SGameActionSet'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(239): error C3536: 'psteamcontroller': cannot be used before it is initialized
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(239): error C2227: left of '->GetActionSetHandle' must point to class/struct/union/generic type
+                 type is 'int'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(240): error C2039: 'handle' : is not a member of 'SGameActionSet'
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(112) : see declaration of 'SGameActionSet'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(259): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(260): error C2039: 'GetConnectedControllers' : is not a member of 'ISteamController'
+                 d:\sourcesdk\map-labs-master\sp\src\public\steam\isteamcontroller.h(40) : see declaration of 'ISteamController'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(268): error C2039: 'ActivateSteamControllerActionSet' : is not a member of 'IInputSystem'
+                 d:\sourcesdk\map-labs-master\sp\src\public\inputsystem\iinputsystem.h(24) : see declaration of 'IInputSystem'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(268): error C2065: 'GAME_ACTION_SET_MENUCONTROLS' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(286): error C2065: 'ControllerDigitalActionData_t' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(286): error C2146: syntax error : missing ';' before identifier 'data'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(286): error C2065: 'data' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(286): error C2039: 'GetDigitalActionData' : is not a member of 'ISteamController'
+                 d:\sourcesdk\map-labs-master\sp\src\public\steam\isteamcontroller.h(40) : see declaration of 'ISteamController'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(286): error C2039: 'handle' : is not a member of 'SDigitalMenuAction'
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(80) : see declaration of 'SDigitalMenuAction'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(289): error C2065: 'data' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(289): error C2228: left of '.bActive' must have class/struct/union
+                 type is 'unknown-type'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(291): error C2065: 'data' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(291): error C2228: left of '.bState' must have class/struct/union
+                 type is 'unknown-type'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(294): error C2065: 'data' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(294): error C2228: left of '.bState' must have class/struct/union
+                 type is 'unknown-type'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(296): error C2065: 'data' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(296): error C2228: left of '.bState' must have class/struct/union
+                 type is 'unknown-type'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(344): error C2660: 'ISteamController::Init' : function does not take 0 arguments
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(354): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(365): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(366): error C2039: 'GetConnectedControllers' : is not a member of 'ISteamController'
+                 d:\sourcesdk\map-labs-master\sp\src\public\steam\isteamcontroller.h(40) : see declaration of 'ISteamController'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(379): error C2065: 'INPUT_TYPE_STEAMCONTROLLER' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389): error C2143: syntax error : missing ';' before 'CInputSystem::GetActionSetHandle'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389): error C2065: 'GameActionSet_t' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389): error C2146: syntax error : missing ')' before identifier 'eActionSet'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389): error C2761: 'GetActionSetHandle' : member function redeclaration not allowed
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389): error C2059: syntax error : ')'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(390): error C2143: syntax error : missing ';' before '{'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(390): error C2447: '{' : missing function header (old-style formal list?)
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(394): error C2143: syntax error : missing ';' before 'CInputSystem::GetActionSetHandle'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(394): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(394): error C2086: 'int ControllerActionSetHandle_t' : redefinition
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(389) : see declaration of 'ControllerActionSetHandle_t'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(395): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(400): error C2039: 'handle' : is not a member of 'SGameActionSet'
+                 d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(112) : see declaration of 'SGameActionSet'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(408): error C2061: syntax error : identifier 'GameActionSet_t'
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(415): error C2065: 'STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(417): error C2065: 'STEAM_CONTROLLER_MAX_COUNT' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(419): error C2065: 'm_currentActionSet' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(419): error C2065: 'eActionSet' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(422): error C2065: 'm_currentActionSet' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(422): error C2065: 'eActionSet' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\inputsystem\steamcontroller.cpp(422): fatal error C1003: error count exceeds 100; stopping compilation
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\inputsystem\inputsystem.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.93

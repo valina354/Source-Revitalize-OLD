@@ -1,0 +1,97 @@
+﻿Build started 12/21/2023 11:02:57 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\vbsp.vcxproj" on node 11 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\..\game\bin\.\vbsp.exe for /f "delims=" %%A in ('attrib "..\..\..\game\bin\.\vbsp.exe"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\Release\"vbsp.exe
+         if exist "..\..\devtools\bin\vpc.exe" "..\..\devtools\bin\vpc.exe" -crc2 "vbsp.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release\.\\vbsp.exe" /INCREMENTAL:NO /NOLOGO shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib ws2_32.lib odbc32.lib odbccp32.lib winmm.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:".\Release\.\/vbsp.pdb" /SUBSYSTEM:CONSOLE,"5.01" /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release\.\vbsp.lib" /MACHINE:X86 /SAFESEH:NO /NXCOMPAT /ignore:4221 .\Release\.\\pointeroverride.obj
+         .\Release\.\/boundbox.obj
+         .\Release\.\/brushbsp.obj
+         .\Release\.\/CollisionUtils.obj
+         .\Release\.\/csg.obj
+         .\Release\.\/cubemap.obj
+         .\Release\.\/detail.obj
+         .\Release\.\/detailObjects.obj
+         .\Release\.\/disp_common.obj
+         .\Release\.\/disp_ivp.obj
+         .\Release\.\/disp_powerinfo.obj
+         .\Release\.\/disp_vbsp.obj
+         .\Release\.\/faces.obj
+         .\Release\.\/glfile.obj
+         .\Release\.\/ivp.obj
+         .\Release\.\/leakfile.obj
+         .\Release\.\/loadcmdline.obj
+         .\Release\.\/lumpfiles.obj
+         .\Release\.\/manifest.obj
+         .\Release\.\/map.obj
+         .\Release\.\/materialpatch.obj
+         .\Release\.\/materialsub.obj
+         .\Release\.\/memoverride.obj
+         .\Release\.\/mstristrip.obj
+         .\Release\.\/nodraw.obj
+         .\Release\.\/normals.obj
+         .\Release\.\/overlay.obj
+         .\Release\.\/physdll.obj
+         .\Release\.\/portals.obj
+         .\Release\.\/prtfile.obj
+         .\Release\.\/ScratchPad3D.obj
+         .\Release\.\/scratchpad_helpers.obj
+         .\Release\.\/StaticProp.obj
+         .\Release\.\/textures.obj
+         .\Release\.\/tree.obj
+         .\Release\.\/utilmatlib.obj
+         .\Release\.\/vbsp.obj
+         .\Release\.\/vscript_funcs_vis.obj
+         .\Release\.\/vscript_funcs_vmfs.obj
+         .\Release\.\/vscript_vbsp.obj
+         .\Release\.\/worldvertextransitionfixup.obj
+         .\Release\.\/writebsp.obj
+         .\Release\.\/zip_utils.obj
+         .\Release\.\/bsplib.obj
+         .\Release\.\/builddisp.obj
+         .\Release\.\/ChunkFile.obj
+         .\Release\.\/cmdlib.obj
+         .\Release\.\/filesystem_helpers.obj
+         .\Release\.\/filesystem_init.obj
+         .\Release\.\/filesystem_tools.obj
+         .\Release\.\/map_shared.obj
+         .\Release\.\/pacifier.obj
+         .\Release\.\/polylib.obj
+         .\Release\.\/scriplib.obj
+         .\Release\.\/threads.obj
+         .\Release\.\/tools_minidump.obj
+         ..\..\lib\public\bitmap.lib
+         ..\..\lib\public\fgdlib.lib
+         ..\..\lib\public\mathlib.lib
+         ..\..\lib\public\tier0.lib
+         ..\..\lib\public\tier1.lib
+         ..\..\lib\public\tier2.lib
+         ..\..\lib\public\vscript.lib
+         ..\..\lib\public\vstdlib.lib
+         ..\..\lib\public\vtf.lib
+            Creating library .\Release\.\vbsp.lib and object .\Release\.\vbsp.exp
+         vbsp.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\.\Release\.\vbsp.exe
+       PostBuildEvent:
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\Release\"vbsp.exe ..\..\..\game\bin\.\vbsp.exe >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\Release\"vbsp.map copy "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\Release\"vbsp.map ..\..\..\game\bin\.\vbsp.map >nul
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\Release\"vbsp.pdb ..\..\..\game\bin\.\vbsp.pdb >nul
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for Vbsp! EXE or DLL is probably running. ***
+         del /q "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\Release\"vbsp.exe
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\utils\vbsp\vbsp.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.24

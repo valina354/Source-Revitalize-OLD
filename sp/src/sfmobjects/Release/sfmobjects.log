@@ -1,0 +1,27 @@
+﻿Build started 12/26/2023 8:57:00 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects\sfmobjects.vcxproj" on node 6 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\lib\public\.\sfmobjects.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\sfmobjects.lib"') do set valveTmpIsReadOnly="%%A"
+         ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" (
+             attrib -r ..\lib\public\.\sfmobjects.lib
+             ..\devtools\bin\gnu\touch.exe -d "1999-01-01" ..\lib\public\.\sfmobjects.lib
+             attrib +r ..\lib\public\.\sfmobjects.lib
+         )
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "sfmobjects.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\sfmobjects.lib" /NOLOGO  /ignore:4221 .\Release\.\/exportfacialanimation.obj
+         .\Release\.\/flexcontrolbuilder.obj
+         .\Release\.\/sfmanimationsetutils.obj
+         .\Release\.\/sfmphonemeextractor.obj
+         .\Release\.\/sfmsession.obj
+         sfmobjects.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects\..\lib\public\.\sfmobjects.lib
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\sfmobjects\sfmobjects.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.39

@@ -1,0 +1,12 @@
+[vpc crc file version 2]
+8209bbc3 D:\sourcesdk\Map-Labs-master\sp\src\devtools\bin\vpc.exe
+_Nc_VS2013/vpcgame:valve_
+3b4372d1 SDKLauncher.vpc
+7e4c41fc ..\vpc_scripts\source_exe_win_win32_base.vpc
+486b766d ..\vpc_scripts\version.vpc
+846102f0 ..\vpc_scripts\loadaddress.vpc
+0d7192b8 ..\vpc_scripts\source_exe_win_win32_debug.vpc
+18e1f8e0 ..\vpc_scripts\source_exe_win_win32_release.vpc
+5cb4ff87 ..\vpc_scripts\source_win32_base.vpc
+016b6dee ..\vpc_scripts\newer_vs_toolsets.vpc
+30bf2216 ..\vpc_scripts\definitions\win32_2010.def

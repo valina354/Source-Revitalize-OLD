@@ -1,0 +1,297 @@
+﻿Build started 12/21/2023 2:07:18 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\materialsystem.vcxproj" on node 2 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\game\bin\.\materialsystem.dll for /f "delims=" %%A in ('attrib "..\..\game\bin\.\materialsystem.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\Release\"materialsystem.dll
+         if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "materialsystem.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       CustomBuild:
+         Compiling pointeroverride.asm
+          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+         Microsoft (R) Macro Assembler Version 12.00.40629.0
+         Copyright (C) Microsoft Corporation.  All rights reserved.
+         
+         Running VPC CRC Check - materialsystem.vpc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=materialsystem /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D DEFINE_MATERIALSYSTEM_INTERFACE /D MATERIALSYSTEM_EXPORTS /D PROTECTED_THINGS_ENABLE /D strncpy=use_Q_strncpy_instead /D _snprintf=use_Q_snprintf_instead /D fopen=dont_use_fopen /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\materialsystem" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yc"pch_materialsystem.h" /Fp".\Release\.\materialsystem.pch" /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw pch_materialsystem.cpp
+         pch_materialsystem.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=materialsystem /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D DEFINE_MATERIALSYSTEM_INTERFACE /D MATERIALSYSTEM_EXPORTS /D PROTECTED_THINGS_ENABLE /D strncpy=use_Q_strncpy_instead /D _snprintf=use_Q_snprintf_instead /D fopen=dont_use_fopen /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\materialsystem" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw CColorCorrection.cpp cmaterial.cpp cmaterial_queuefriendly.cpp CMaterialSubRect.cpp cmaterialvar.cpp cmatnullrendercontext.cpp colorspace.cpp ctexture.cpp ..\public\filesystem_helpers.cpp imagepacker.cpp mat_stub.cpp materialsystem_global.cpp ..\public\tier0\memoverride.cpp morph.cpp occlusionquerymgr.cpp shadersystem.cpp texturemanager.cpp
+         CColorCorrection.cpp
+         cmaterial.cpp
+         cmaterial_queuefriendly.cpp
+         CMaterialSubRect.cpp
+         cmaterialvar.cpp
+         cmatnullrendercontext.cpp
+         colorspace.cpp
+         ctexture.cpp
+         filesystem_helpers.cpp
+         imagepacker.cpp
+         mat_stub.cpp
+         materialsystem_global.cpp
+         memoverride.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(515): error C2259: 'CDummyHardwareConfig' : cannot instantiate abstract class
+                 due to following members:
+                 'bool IMaterialSystemHardwareConfig::SupportsNormalMapCompression(void) const' : is abstract
+                 d:\sourcesdk\map-labs-master\sp\src\public\materialsystem\imaterialsystemhardwareconfig.h(101) : see declaration of 'IMaterialSystemHardwareConfig::SupportsNormalMapCompression'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2335): error C2143: syntax error : missing ';' before '*'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2335): error C2433: 'CDummyMaterialSystem::ITextureCompositor' : 'virtual' not permitted on data declarations
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2335): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2336): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2338): warning C4183: 'NewTextureCompositor': missing return type; assumed to be a member function returning 'int'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2340): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2345): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2335): error C3668: 'CDummyMaterialSystem::NewTextureCompositor' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2355): error C3668: 'CDummyMaterialSystem::AddTextureCompositorTemplate' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(2360): error C3668: 'CDummyMaterialSystem::VerifyTextureCompositorTemplates' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(1074): error C2039: 'SuspendTextureStreaming' : is not a member of 'IMaterialSystem'
+                 d:\sourcesdk\map-labs-master\sp\src\public\materialsystem\imaterialsystem.h(590) : see declaration of 'IMaterialSystem'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\mat_stub.cpp(1080): error C2039: 'ResumeTextureStreaming' : is not a member of 'IMaterialSystem'
+                 d:\sourcesdk\map-labs-master\sp\src\public\materialsystem\imaterialsystem.h(590) : see declaration of 'IMaterialSystem'
+         morph.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmaterialvar.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmaterialvar.cpp)
+         occlusionquerymgr.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmaterial.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmaterial.cpp)
+         shadersystem.cpp
+         texturemanager.cpp
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(1148): error C2065: 'FCVAR_ALLOWED_IN_COMPETITIVE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (CMaterialSubRect.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (CMaterialSubRect.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(1489): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(1954): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(1975): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(1991): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(2007): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterial.cpp(3468): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (CColorCorrection.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (CColorCorrection.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(66): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(70): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(159): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(160): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(162): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(539): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(541): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(543): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (cmatnullrendercontext.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatnullrendercontext.cpp(707): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatnullrendercontext.cpp(712): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatnullrendercontext.cpp(722): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatnullrendercontext.cpp(707): error C3668: 'CMatNullRenderContext::AsyncCreateTextureFromRenderTarget' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (ctexture.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (ctexture.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(235): error C2065: 'TEXTUREFLAGS_STAGING_MEMORY' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(239): error C2065: 'TEXTUREFLAGS_IGNORE_PICMIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(243): error C2065: 'TEXTUREFLAGS_IMMEDIATE_CLEANUP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(633): error C2504: 'IAsyncTextureOperationReceiver' : base class undefined
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(638): error C3668: 'CTextureStreamingJob::AddRef' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(639): error C3668: 'CTextureStreamingJob::Release' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(640): error C3668: 'CTextureStreamingJob::GetRefCount' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(642): error C3668: 'CTextureStreamingJob::OnAsyncCreateComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(643): error C3668: 'CTextureStreamingJob::OnAsyncFindComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(645): error C3668: 'CTextureStreamingJob::OnAsyncReadbackBegin' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(636): error C2664: 'int SafeRelease<CTexture**>(REFCOUNTED_ITEM_PTR &)' : cannot convert argument 1 from 'CTexture **' to 'CTexture **&'
+                 with
+                 [
+                     REFCOUNTED_ITEM_PTR=CTexture **
+                 ]
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(647): error C2664: 'int SafeRelease<CTexture**>(REFCOUNTED_ITEM_PTR &)' : cannot convert argument 1 from 'CTexture **' to 'CTexture **&'
+                 with
+                 [
+                     REFCOUNTED_ITEM_PTR=CTexture **
+                 ]
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1321): error C2065: 'RT_SIZE_LITERAL_PICMIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1321): error C2051: case expression not constant
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1385): error C3861: 'HushAsserts': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1417): error C2039: 'CopyRenderTargetToScratchTexture' : is not a member of 'IShaderAPI'
+                 d:\sourcesdk\map-labs-master\sp\src\public\shaderapi\ishaderapi.h(138) : see declaration of 'IShaderAPI'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1433): error C2039: 'LockRect' : is not a member of 'IShaderAPI'
+                 d:\sourcesdk\map-labs-master\sp\src\public\shaderapi\ishaderapi.h(138) : see declaration of 'IShaderAPI'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1444): error C2039: 'UnlockRect' : is not a member of 'IShaderAPI'
+                 d:\sourcesdk\map-labs-master\sp\src\public\shaderapi\ishaderapi.h(138) : see declaration of 'IShaderAPI'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1519): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1544): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1546): error C2039: 'CanStretchRectFromTextures' : is not a member of 'IHardwareConfigInternal'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\ihardwareconfiginternal.h(22) : see declaration of 'IHardwareConfigInternal'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1565): error C3861: 'SafeAssign': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1566): error C2039: 'AsyncFindTexture' : is not a member of 'IMaterialSystemInternal'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\imaterialsysteminternal.h(187) : see declaration of 'IMaterialSystemInternal'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1566): error C2065: 'TEXTUREFLAGS_STREAMABLE_COARSE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1596): error C3861: 'SafeAssign': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1597): error C2039: 'AsyncFindTexture' : is not a member of 'IMaterialSystemInternal'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\imaterialsysteminternal.h(187) : see declaration of 'IMaterialSystemInternal'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1597): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1622): error C2664: 'int SafeRelease<CTextureStreamingJob**>(REFCOUNTED_ITEM_PTR &)' : cannot convert argument 1 from 'CTextureStreamingJob **' to 'CTextureStreamingJob **&'
+                 with
+                 [
+                     REFCOUNTED_ITEM_PTR=CTextureStreamingJob **
+                 ]
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1797): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1921): error C2065: 'TEXTUREFLAGS_STAGING_MEMORY' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1922): error C2065: 'TEXTURE_CREATE_SYSMEM' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1988): error C2065: 'g_currentTextures' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1988): error C2228: left of '.InsertOrReplace' must have class/struct/union
+                 type is 'unknown-type'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1988): error C3861: 'STAGING_ONLY_EXEC': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(1988): error C3861: 'TexInfo_t': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2026): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2028): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2061): error C2039: 'CopyTextureToTexture' : is not a member of 'IShaderAPI'
+                 d:\sourcesdk\map-labs-master\sp\src\public\shaderapi\ishaderapi.h(138) : see declaration of 'IShaderAPI'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2083): error C2039: 'IsRuntimeCompressed' : is not a member of 'ImageLoader'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2083): error C3861: 'IsRuntimeCompressed': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2287): error C2039: 'TexLodClamp' : is not a member of 'IShaderAPI'
+                 d:\sourcesdk\map-labs-master\sp\src\public\shaderapi\ishaderapi.h(138) : see declaration of 'IShaderAPI'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2288): error C2039: 'TexLodBias' : is not a member of 'IShaderAPI'
+                 d:\sourcesdk\map-labs-master\sp\src\public\shaderapi\ishaderapi.h(138) : see declaration of 'IShaderAPI'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2366): error C2039: 'OverrideRenderTargetAllocation' : is not a member of 'IMaterialSystem'
+                 d:\sourcesdk\map-labs-master\sp\src\public\materialsystem\imaterialsystem.h(590) : see declaration of 'IMaterialSystem'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2368): error C2065: 'TEXTUREFLAGS_IMMEDIATE_CLEANUP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2369): error C2039: 'OverrideRenderTargetAllocation' : is not a member of 'IMaterialSystem'
+                 d:\sourcesdk\map-labs-master\sp\src\public\materialsystem\imaterialsystem.h(590) : see declaration of 'IMaterialSystem'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2373): error C2664: 'int SafeRelease<ITexture**>(REFCOUNTED_ITEM_PTR &)' : cannot convert argument 1 from 'ITexture **' to 'ITexture **&'
+                 with
+                 [
+                     REFCOUNTED_ITEM_PTR=ITexture **
+                 ]
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2436): error C2664: 'int SafeRelease<ITexture**>(REFCOUNTED_ITEM_PTR &)' : cannot convert argument 1 from 'ITexture **' to 'ITexture **&'
+                 with
+                 [
+                     REFCOUNTED_ITEM_PTR=ITexture **
+                 ]
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2613): error C2065: 'TEXTUREFLAGS_IMMEDIATE_CLEANUP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2810): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(2813): error C2065: 'TEXTUREFLAGS_STREAMABLE_COARSE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3286): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3313): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3319): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3319): error C2065: 'TEXTUREFLAGS_STREAMABLE_COARSE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3321): error C2039: 'GetMipmapRange' : is not a member of 'IVTFTexture'
+                 d:\sourcesdk\map-labs-master\sp\src\public\vtf\vtf.h(172) : see declaration of 'IVTFTexture'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3486): error C2065: 'TEXTUREFLAGS_STAGING_MEMORY' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3486): error C2065: 'TEXTUREFLAGS_IGNORE_PICMIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3597): error C2065: 'TEXTUREFLAGS_STAGING_MEMORY' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3597): error C2065: 'TEXTUREFLAGS_IGNORE_PICMIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3642): error C2065: 'TEXTUREFLAGS_STAGING_MEMORY' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3713): error C2065: 'RT_SIZE_LITERAL_PICMIP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3742): error C2039: 'CanStretchRectFromTextures' : is not a member of 'IHardwareConfigInternal'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\ihardwareconfiginternal.h(22) : see declaration of 'IHardwareConfigInternal'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3743): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(3762): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4170): error C2143: syntax error : missing ')' before 'do'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4170): error C2143: syntax error : missing ';' before '{'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4170): error C3861: 'STAGING_ONLY_EXEC': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4170): error C2059: syntax error : ')'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4171): error C3861: 'DebuggerBreakIfDebugging_StagingOnly': identifier not found
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4258): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4259): error C2039: 'CanStretchRectFromTextures' : is not a member of 'IHardwareConfigInternal'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\ihardwareconfiginternal.h(22) : see declaration of 'IHardwareConfigInternal'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4259): error C2065: 'TEXTUREFLAGS_STREAMABLE_FINE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4263): error C2039: 'UnserializeEx' : is not a member of 'IVTFTexture'
+                 d:\sourcesdk\map-labs-master\sp\src\public\vtf\vtf.h(172) : see declaration of 'IVTFTexture'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4332): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4492): error C2065: 'TEXTUREFLAGS_STREAMABLE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4492): error C2065: 'TEXTUREFLAGS_STREAMABLE_COARSE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4501): error C2065: 'STREAMING_START_MIPMAP' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\ctexture.cpp(4522): error C2065: 'TEXTUREFLAGS_STREAMABLE_COARSE' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (morph.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (morph.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(66): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (morph.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(70): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (morph.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(141): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (shadersystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.h(144): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (shadersystem.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(66): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(70): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(159): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(160): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(162): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(539): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(541): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatrendercontext.h(543): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(405): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(412): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(426): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\shadersystem.cpp(895): error C2039: 'GetStringManualCharCount' : is not a member of 'CUtlBuffer'
+                 d:\sourcesdk\map-labs-master\sp\src\public\tier1\utlbuffer.h(109) : see declaration of 'CUtlBuffer'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\shadersystem.cpp(1033): error C2065: 'SHADER_PARAM_TYPE_MATRIX4X2' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(405): error C3668: 'CMatQueuedRenderContext::AsyncCreateTextureFromRenderTarget' : method with override specifier 'override' did not override any base class methods (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\shadersystem.cpp(1033): error C2051: case expression not constant
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(407): error C2065: 'pRecipient' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(409): error C2039: 'AsyncCreateTextureFromRenderTarget' : is not a member of 'IMatRenderContext' (texturemanager.cpp)
+                 d:\sourcesdk\map-labs-master\sp\src\public\materialsystem\imaterialsystem.h(1086) : see declaration of 'IMatRenderContext'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(409): error C2276: '&' : illegal operation on bound member function expression (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(409): error C2065: 'pRecipient' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(409): error C2065: 'pExtraArgs' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(414): error C2065: 'pRecipient' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(414): error C2065: 'pExtraArgs' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(416): error C2065: 'pRecipient' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(416): error C2065: 'pExtraArgs' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(428): error C2065: 'pRecipient' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(430): error C2065: 'pRecipient' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmatqueuedrendercontext.h(430): error C2065: 'pExtraArgs' : undeclared identifier (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterialsystem.h(483): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterialsystem.h(476): error C3668: 'CMaterialSystem::NewTextureCompositor' : method with override specifier 'override' did not override any base class methods (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterialsystem.h(483): error C3668: 'CMaterialSystem::AsyncFindTexture' : method with override specifier 'override' did not override any base class methods (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterialsystem.h(484): error C3668: 'CMaterialSystem::CreateNamedTextureFromBitsEx' : method with override specifier 'override' did not override any base class methods (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterialsystem.h(486): error C3668: 'CMaterialSystem::AddTextureCompositorTemplate' : method with override specifier 'override' did not override any base class methods (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\cmaterialsystem.h(487): error C3668: 'CMaterialSystem::VerifyTextureCompositorTemplates' : method with override specifier 'override' did not override any base class methods (texturemanager.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(672): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(675): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(773): error C2143: syntax error : missing ';' before '*'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(773): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(787): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(785): error C2614: 'AsyncLoadJob_t' : illegal member initialization: 'm_pRecipient' is not a base or member
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(790): error C2065: 'pRecipient' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(791): error C2065: 'pExtraArgs' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(792): error C2065: 'bComplain' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(793): error C2065: 'nAdditionalCreationFlags' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(795): error C2614: 'AsyncLoadJob_t' : illegal member initialization: 'm_pRecipient' is not a base or member
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(802): error C2504: 'IAsyncTextureOperationReceiver' : base class undefined
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(811): error C3668: 'CAsyncCopyRequest::AddRef' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(812): error C3668: 'CAsyncCopyRequest::Release' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(821): error C3668: 'CAsyncCopyRequest::GetRefCount' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(823): error C3668: 'CAsyncCopyRequest::OnAsyncCreateComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(824): error C3668: 'CAsyncCopyRequest::OnAsyncFindComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(825): error C3668: 'CAsyncCopyRequest::OnAsyncMapComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(826): error C3668: 'CAsyncCopyRequest::OnAsyncReadbackBegin' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(839): error C2504: 'IAsyncTextureOperationReceiver' : base class undefined
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(851): error C3668: 'CAsyncMapResult::AddRef' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(852): error C3668: 'CAsyncMapResult::Release' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(861): error C3668: 'CAsyncMapResult::GetRefCount' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(863): error C3668: 'CAsyncMapResult::OnAsyncCreateComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(864): error C3668: 'CAsyncMapResult::OnAsyncFindComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(865): error C3668: 'CAsyncMapResult::OnAsyncMapComplete' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(873): error C3668: 'CAsyncMapResult::OnAsyncReadbackBegin' : method with override specifier 'override' did not override any base class methods
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(897): error C2143: syntax error : missing ';' before '*'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(897): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(915): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(913): error C2614: 'AsyncReadJob_t' : illegal member initialization: 'm_pRecipient' is not a base or member
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(924): error C2065: 'pRecipient' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(925): error C2065: 'pExtraArgs' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(926): error C2614: 'AsyncReadJob_t' : illegal member initialization: 'm_pRecipient' is not a base or member
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(936): error C2065: 'm_pRecipient' : undeclared identifier
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(950): error C2664: 'int SafeRelease<CAsyncMapResult**>(REFCOUNTED_ITEM_PTR &)' : cannot convert argument 1 from 'CAsyncMapResult **' to 'CAsyncMapResult **&'
+                 with
+                 [
+                     REFCOUNTED_ITEM_PTR=CAsyncMapResult **
+                 ]
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(961): error C2039: 'm_pRecipient' : is not a member of 'AsyncReadJob_t'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(888) : see declaration of 'AsyncReadJob_t'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(961): error C2227: left of '->GetRefCount' must point to class/struct/union/generic type
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(975): error C2039: 'm_pRecipient' : is not a member of 'AsyncLoadJob_t'
+                 d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(770) : see declaration of 'AsyncLoadJob_t'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(975): error C2227: left of '->GetRefCount' must point to class/struct/union/generic type
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(1151): error C2039: 'IsEmpty' : is not a member of 'CUtlQueue<AsyncReadJob_t *>'
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\texturemanager.cpp(1151): fatal error C1903: unable to recover from previous error(s); stopping compilation
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(66): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (occlusionquerymgr.cpp)
+     1>d:\sourcesdk\map-labs-master\sp\src\materialsystem\imatrendercontextinternal.h(70): error C2061: syntax error : identifier 'IAsyncTextureOperationReceiver' (occlusionquerymgr.cpp)
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\materialsystem.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.93

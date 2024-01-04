@@ -1,0 +1,106 @@
+﻿Build started 12/26/2023 8:57:01 PM.
+     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\game_shader_dx9_episodic.vcxproj" on node 13 (Build target(s)).
+     1>PreBuildEvent:
+         if EXIST ..\..\..\game\mod_episodic\bin\.\game_shader_dx9.dll for /f "delims=" %%A in ('attrib "..\..\..\game\mod_episodic\bin\.\game_shader_dx9.dll"') do set valveTmpIsReadOnly="%%A"
+         set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\"game_shader_dx9.dll
+         if exist "..\..\devtools\bin\vpc.exe" "..\..\devtools\bin\vpc.exe" -crc2 "game_shader_dx9_episodic.vcxproj"
+         if ERRORLEVEL 1 exit /b 1
+         
+         :VCEnd
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /Ifxctmp9 /Ivshtmp9 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=game_shader_dx9 /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D PARALLAX_CORRECTED_CUBEMAPS /D STDSHADER_DX9_DLL_EXPORT /D FAST_MATERIALVAR_ACCESS /D USE_ACTUAL_DX /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo"Release_dx9_mod_episodic\/" /Fd"Release_dx9_mod_episodic\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw water.cpp
+         water.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Release_dx9_mod_episodic\\game_shader_dx9.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\lib\common\. /LIBPATH:..\..\lib\public\. shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib version.lib winmm.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /MANIFEST:NO /DEBUG /PDB:"Release_dx9_mod_episodic\/game_shader_dx9.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:"Release_dx9_mod_episodic\game_shader_dx9.lib" /MACHINE:X86 /SAFESEH:NO  /ignore:4221 /DLL Release_dx9_mod_episodic\\pointeroverride.obj
+         Release_dx9_mod_episodic\/BaseVSShader.obj
+         Release_dx9_mod_episodic\/bleach_bypass.obj
+         Release_dx9_mod_episodic\/Bloom.obj
+         Release_dx9_mod_episodic\/chromatic.obj
+         Release_dx9_mod_episodic\/cloak_blended_pass_helper.obj
+         Release_dx9_mod_episodic\/color_clipping.obj
+         Release_dx9_mod_episodic\/complements.obj
+         Release_dx9_mod_episodic\/cubic_distortion.obj
+         Release_dx9_mod_episodic\/decalmodulate_dx9.obj
+         Release_dx9_mod_episodic\/depthoffield_dx9.obj
+         Release_dx9_mod_episodic\/depthwrite.obj
+         Release_dx9_mod_episodic\/Desaturate.obj
+         Release_dx9_mod_episodic\/emissive_scroll_blended_pass_helper.obj
+         Release_dx9_mod_episodic\/engine_post_dx9.obj
+         Release_dx9_mod_episodic\/example_model_dx9.obj
+         Release_dx9_mod_episodic\/example_model_dx9_helper.obj
+         Release_dx9_mod_episodic\/eye_refract.obj
+         Release_dx9_mod_episodic\/eye_refract_helper.obj
+         Release_dx9_mod_episodic\/eyeball.obj
+         Release_dx9_mod_episodic\/eyeglint_dx9.obj
+         Release_dx9_mod_episodic\/eyes_dx8_dx9_helper.obj
+         Release_dx9_mod_episodic\/eyes_dx9.obj
+         Release_dx9_mod_episodic\/flesh_interior_blended_pass_helper.obj
+         Release_dx9_mod_episodic\/fxaa.obj
+         Release_dx9_mod_episodic\/gaussian_blur_3x3.obj
+         Release_dx9_mod_episodic\/gstring_light_volumetrics.obj
+         Release_dx9_mod_episodic\/lightmappedgeneric_dx9.obj
+         Release_dx9_mod_episodic\/lightmappedgeneric_dx9_helper.obj
+         Release_dx9_mod_episodic\/lightmappedreflective.obj
+         Release_dx9_mod_episodic\/memoverride.obj
+         Release_dx9_mod_episodic\/MonitorScreen_dx9.obj
+         Release_dx9_mod_episodic\/negative.obj
+         Release_dx9_mod_episodic\/nightvision.obj
+         Release_dx9_mod_episodic\/object_motion_blur_dx9.obj
+         Release_dx9_mod_episodic\/pbr_dx9.obj
+         Release_dx9_mod_episodic\/refract.obj
+         Release_dx9_mod_episodic\/refract_dx9_helper.obj
+         Release_dx9_mod_episodic\/screenspace_general.obj
+         Release_dx9_mod_episodic\/screenwater.obj
+         Release_dx9_mod_episodic\/shatteredglass.obj
+         Release_dx9_mod_episodic\/skin_dx9_helper.obj
+         Release_dx9_mod_episodic\/skydome_atmosphere.obj
+         Release_dx9_mod_episodic\/skydome_atmosphere_helper.obj
+         Release_dx9_mod_episodic\/skymask.obj
+         Release_dx9_mod_episodic\/splinerope.obj
+         Release_dx9_mod_episodic\/sprite_dx9.obj
+         Release_dx9_mod_episodic\/ss_sunrays.obj
+         Release_dx9_mod_episodic\/ssao.obj
+         Release_dx9_mod_episodic\/ssao_combine.obj
+         Release_dx9_mod_episodic\/teeth.obj
+         Release_dx9_mod_episodic\/unlitgeneric_dx9.obj
+         Release_dx9_mod_episodic\/unlittwotexture_dx9.obj
+         Release_dx9_mod_episodic\/unsharp.obj
+         Release_dx9_mod_episodic\/unsharp_blur.obj
+         Release_dx9_mod_episodic\/vertexlitgeneric_dx9.obj
+         Release_dx9_mod_episodic\/vertexlitgeneric_dx9_helper.obj
+         Release_dx9_mod_episodic\/vignetting.obj
+         Release_dx9_mod_episodic\/water.obj
+         Release_dx9_mod_episodic\/windowimposter_dx90.obj
+         Release_dx9_mod_episodic\/worldtwotextureblend.obj
+         Release_dx9_mod_episodic\/worldvertextransition.obj
+         Release_dx9_mod_episodic\/worldvertextransition_dx8_helper.obj
+         ..\..\lib\public\mathlib.lib
+         ..\..\lib\public\shaderlib.lib
+         ..\..\lib\public\tier0.lib
+         ..\..\lib\public\tier1.lib
+         ..\..\lib\public\vstdlib.lib
+            Creating library Release_dx9_mod_episodic\game_shader_dx9.lib and object Release_dx9_mod_episodic\game_shader_dx9.exp
+         game_shader_dx9_episodic.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\game_shader_dx9.dll
+       PostBuildEvent:
+         if not exist "..\..\..\game\mod_episodic\bin\." mkdir "..\..\..\game\mod_episodic\bin\."
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\game_shader_dx9.dll" "..\..\..\game\mod_episodic\bin\.\game_shader_dx9.dll"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         if exist "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\game_shader_dx9.map" copy "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\game_shader_dx9.map" ..\..\..\game\mod_episodic\bin\.\game_shader_dx9.map
+         copy "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\game_shader_dx9.pdb" "..\..\..\game\mod_episodic\bin\.\game_shader_dx9.pdb"
+         if ERRORLEVEL 1 goto BuildEventFailed
+         goto BuildEventOK
+         :BuildEventFailed
+         echo *** ERROR! PostBuildStep FAILED for Shaders (Episodic)! EXE or DLL is probably running. ***
+         del /q "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\Release_dx9_mod_episodic\game_shader_dx9.dll"
+         exit 1
+         :BuildEventOK
+         
+         :VCEnd
+                 1 file(s) copied.
+                 1 file(s) copied.
+     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\materialsystem\stdshaders\game_shader_dx9_episodic.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.93
