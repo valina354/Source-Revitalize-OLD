@@ -3875,7 +3875,7 @@ float CBaseCombatCharacter::CalculatePhysicsStressDamage( vphysics_objectstress_
 
 void CBaseCombatCharacter::ApplyStressDamage( IPhysicsObject *pPhysics, bool bRequireLargeObject )
 {
-#ifdef EZ2
+#ifdef EZ
 	if (Classify() == CLASS_COMBINE)
 	{
 		// Bypass stress completely for Combine

@@ -1,5 +1,5 @@
-﻿Build started 12/23/2023 6:12:57 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\vgui2\vgui_controls\vgui_controls.vcxproj" on node 7 (Rebuild target(s)).
+﻿Build started 1/17/2024 7:08:36 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\vgui2\vgui_controls\vgui_controls.vcxproj" on node 2 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\..\lib\public\.\vgui_controls.lib ( for /f "delims=" %%A in ('attrib "..\..\lib\public\.\vgui_controls.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\..\lib\public\. mkdir ..\..\lib\public\. )
@@ -172,9 +172,9 @@
          .\Release\.\/vgui_key_translation.obj
          .\Release\.\/WizardPanel.obj
          .\Release\.\/WizardSubPanel.obj
-         vgui_controls.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\vgui2\vgui_controls\..\..\lib\public\.\vgui_controls.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\vgui2\vgui_controls\vgui_controls.vcxproj" (Rebuild target(s)).
+         vgui_controls.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\vgui2\vgui_controls\..\..\lib\public\.\vgui_controls.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\vgui2\vgui_controls\vgui_controls.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:14.33
+Time Elapsed 00:00:16.19

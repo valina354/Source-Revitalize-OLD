@@ -151,6 +151,12 @@
     <ClCompile Include="gaussian_blur_3x3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gaussianx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gaussiany.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="gstring_light_volumetrics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -315,6 +321,12 @@
       <Filter>Shader Source\fxc</Filter>
     </CustomBuild>
     <CustomBuild Include="gauss_blur_3x3_vs30.fxc">
+      <Filter>Shader Source\fxc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gaussianx_ps2x.fxc">
+      <Filter>Shader Source\fxc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gaussiany_ps2x.fxc">
       <Filter>Shader Source\fxc</Filter>
     </CustomBuild>
     <CustomBuild Include="gstring_light_volumetrics_ps20b.fxc">

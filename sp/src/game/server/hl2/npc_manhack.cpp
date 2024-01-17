@@ -257,7 +257,7 @@ CNPC_Manhack::~CNPC_Manhack()
 //-----------------------------------------------------------------------------
 Class_T	CNPC_Manhack::Classify(void)
 {
-#ifdef MAPBASE
+#ifdef EZ
 	return CLASS_MANHACK; // Manhacks are always CLASS_MANHACK in EZ1
 #else
 	return (m_bHeld||m_bHackedByAlyx) ? CLASS_PLAYER_ALLY : CLASS_MANHACK; 
@@ -2604,7 +2604,7 @@ void CNPC_Manhack::StartEye( void )
 		
 		if( m_bHackedByAlyx )
 		{
-#ifdef MAPBASE
+#ifdef EZ
 			m_pEyeGlow->SetTransparency(kRenderTransAdd, 0, 255, 255, 128, kRenderFxNoDissipation);
 			m_pEyeGlow->SetColor(0, 255, 255);
 #else

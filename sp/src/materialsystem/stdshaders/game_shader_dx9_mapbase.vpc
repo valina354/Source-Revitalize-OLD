@@ -89,6 +89,8 @@ $Project
 		$File	"ssao_combine.cpp"
 		$File	"gaussian_blur_3x3.cpp"
 		$File	"pbr_dx9.cpp"
+		$File	"gaussiany.cpp"
+		$File	"gaussianx.cpp"
 	}
 
 	//$Shaders	"mapbase_dx9_20b.txt"

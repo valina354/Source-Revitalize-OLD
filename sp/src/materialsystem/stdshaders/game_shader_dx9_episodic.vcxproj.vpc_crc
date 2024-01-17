@@ -1,5 +1,5 @@
 [vpc crc file version 2]
-8209bbc3 D:\sourcesdk\Map-Labs-master\sp\src\devtools\bin\vpc.exe
+8209bbc3 D:\sourcesdk\super-duper-resource-source-engine\sp\src\devtools\bin\vpc.exe
 _Nc_VS2013/vpcgame:valve_
 1ce8cad2 game_shader_dx9_episodic.vpc
 f48041ce ..\..\materialsystem\stdshaders\game_shader_dx9_base.vpc
@@ -14,5 +14,5 @@ d752cf80 ..\..\vpc_scripts\platform_dirs.vpc
 5cb4ff87 ..\..\vpc_scripts\source_win32_base.vpc
 016b6dee ..\..\vpc_scripts\newer_vs_toolsets.vpc
 346bda4a ..\..\vpc_scripts\source_video_base.vpc
-bfc84223 ..\..\materialsystem\stdshaders\game_shader_dx9_mapbase.vpc
+a79d6068 ..\..\materialsystem\stdshaders\game_shader_dx9_mapbase.vpc
 30bf2216 ..\..\vpc_scripts\definitions\win32_2010.def

@@ -51,6 +51,11 @@ ConVar xc_uncrouch_on_jump( "xc_uncrouch_on_jump", "1", FCVAR_ARCHIVE, "Uncrouch
 ConVar player_limit_jump_speed( "player_limit_jump_speed", "1", FCVAR_REPLICATED );
 #endif
 
+// Accelerated back hopping (un-)fix
+// If enabled, standard backjumping behaviour will be enabled.
+// If disabled, player will save his speed by bunnyjumping (its hard but possible) but will be disallowed to boost
+ConVar sv_abh("sv_abh", "0", FCVAR_ARCHIVE | FCVAR_REPLICATED, "Accelerated back hopping (1 - on, 0 - off)");
+
 // option_duck_method is a carrier convar. Its sole purpose is to serve an easy-to-flip
 // convar which is ONLY set by the X360 controller menu to tell us which way to bind the
 // duck controls. Its value is meaningless anytime we don't have the options window open.
@@ -65,6 +70,11 @@ ConVar player_crouch_multiplier( "player_crouch_multiplier", "0.33333333", FCVAR
 ConVar debug_latch_reset_onduck( "debug_latch_reset_onduck", "1", FCVAR_CHEAT );
 #endif
 #endif
+
+// Camera Bob
+ConVar cl_viewbob_enabled("cl_viewbob_enabled", "1", 0, "Oscillation Toggle");
+ConVar cl_viewbob_timer("cl_viewbob_timer", "10", 0, "Speed of Oscillation");
+ConVar cl_viewbob_scale("cl_viewbob_scale", "0.02", 0, "Magnitude of Oscillation");
 
 // [MD] I'll remove this eventually. For now, I want the ability to A/B the optimizations.
 bool g_bMovementOptimizations = true;
@@ -1989,6 +1999,12 @@ void CGameMovement::WalkMove( void )
 	// Copy movement amounts
 	fmove = mv->m_flForwardMove;
 	smove = mv->m_flSideMove;
+	if (cl_viewbob_enabled.GetBool() && !engine->IsPaused())
+	{
+		float xoffset = sin(gpGlobals->curtime * cl_viewbob_timer.GetFloat()) * player->GetAbsVelocity().Length() * cl_viewbob_scale.GetFloat() / 100;
+		float yoffset = sin(2 * gpGlobals->curtime * cl_viewbob_timer.GetFloat()) * player->GetAbsVelocity().Length() * cl_viewbob_scale.GetFloat() / 400;
+		player->ViewPunch(QAngle(xoffset, yoffset, 0));
+	}
 
 	// Zero out z components of movement vectors
 	if ( g_bMovementOptimizations )
@@ -2539,11 +2555,10 @@ bool CGameMovement::CheckJumpButton( void )
 		mv->m_vecVelocity[2] += flGroundFactor * flMul;  // 2 * gravity * height
 	}
 
-	// Add a little forward velocity based on your current forward velocity - if you are not sprinting.
-#if defined( HL2_DLL ) || defined( HL2_CLIENT_DLL )
-	if ( gpGlobals->maxClients == 1 )
-	{
-		CHLMoveData *pMoveData = ( CHLMoveData* )mv;
+	// ABH
+	if (sv_abh.GetBool()) {
+		// Add a little forward velocity based on your current forward velocity - if you are not sprinting.
+		CHLMoveData *pMoveData = (CHLMoveData*)mv;
 		Vector vecForward;
 		AngleVectors( mv->m_vecViewAngles, &vecForward );
 		vecForward.z = 0;
@@ -2566,9 +2581,18 @@ bool CGameMovement::CheckJumpButton( void )
 			flSpeedAddition *= -1.0f;
 
 		// Add it on
-		VectorAdd( (vecForward*flSpeedAddition), mv->m_vecVelocity, mv->m_vecVelocity );
 	}
-#endif
+	else {
+		// Cap velocity...
+		Vector velocity = mv->m_vecVelocity;
+		float zspeed = velocity.z;
+		velocity.z = 0;
+
+		if (velocity.Length() > mv->m_flMaxSpeed) {
+			mv->m_vecVelocity = velocity.Normalized() * mv->m_flMaxSpeed;
+			mv->m_vecVelocity.z = zspeed;
+		}
+	}
 
 	FinishGravity();
 

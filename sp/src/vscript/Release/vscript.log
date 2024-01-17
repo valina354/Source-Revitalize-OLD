@@ -1,5 +1,5 @@
-﻿Build started 12/23/2023 6:12:57 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\vscript\vscript.vcxproj" on node 4 (Rebuild target(s)).
+﻿Build started 1/17/2024 7:08:36 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\vscript\vscript.vcxproj" on node 4 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\lib\public\.\vscript.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\vscript.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
@@ -67,9 +67,9 @@
          .\Release\.\/sqstdsystem.obj
          .\Release\.\/sqtable.obj
          .\Release\.\/sqvm.obj
-         vscript.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\vscript\..\lib\public\.\vscript.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\vscript\vscript.vcxproj" (Rebuild target(s)).
+         vscript.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\vscript\..\lib\public\.\vscript.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\vscript\vscript.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:13.85
+Time Elapsed 00:00:15.30

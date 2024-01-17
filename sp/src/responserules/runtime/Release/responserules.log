@@ -1,5 +1,5 @@
-﻿Build started 12/23/2023 6:12:57 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\responserules\runtime\responserules.vcxproj" on node 5 (Rebuild target(s)).
+﻿Build started 1/17/2024 7:08:37 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\responserules\runtime\responserules.vcxproj" on node 8 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\..\lib\public\.\responserules.lib ( for /f "delims=" %%A in ('attrib "..\..\lib\public\.\responserules.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\..\lib\public\. mkdir ..\..\lib\public\. )
@@ -34,9 +34,9 @@
          .\Release\.\/rr_response.obj
          .\Release\.\/rr_speechconcept.obj
          .\Release\.\/rrrlib.obj
-         responserules.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\responserules\runtime\..\..\lib\public\.\responserules.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\responserules\runtime\responserules.vcxproj" (Rebuild target(s)).
+         responserules.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\responserules\runtime\..\..\lib\public\.\responserules.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\responserules\runtime\responserules.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:13.43
+Time Elapsed 00:00:14.38

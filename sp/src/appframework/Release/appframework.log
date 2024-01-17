@@ -1,5 +1,5 @@
-﻿Build started 12/26/2023 8:57:00 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\appframework\appframework.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/17/2024 7:08:37 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\appframework\appframework.vcxproj" on node 7 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\lib\public\.\appframework.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\appframework.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
@@ -18,9 +18,9 @@
          .\Release\.\/filesystem_init.obj
          .\Release\.\/vguimatsysapp.obj
          .\Release\.\/winapp.obj
-         appframework.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\appframework\..\lib\public\.\appframework.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\appframework\appframework.vcxproj" (Build target(s)).
+         appframework.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\appframework\..\lib\public\.\appframework.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\appframework\appframework.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.23
+Time Elapsed 00:00:03.40

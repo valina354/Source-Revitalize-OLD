@@ -1,19 +1,20 @@
-﻿Build started 12/26/2023 8:57:00 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\mdllib.vcxproj" on node 11 (Build target(s)).
+﻿Build started 1/17/2024 7:08:52 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\mdllib.vcxproj" on node 7 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\..\game\bin\.\mdllib.dll for /f "delims=" %%A in ('attrib "..\..\game\bin\.\mdllib.dll"') do set valveTmpIsReadOnly="%%A"
          set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
-         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\Release\"mdllib.dll
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\Release\"mdllib.dll
          if exist "..\devtools\bin\vpc.exe" "..\devtools\bin\vpc.exe" -crc2 "mdllib.vcxproj"
          if ERRORLEVEL 1 exit /b 1
          
          :VCEnd
        CustomBuild:
          Compiling pointeroverride.asm
-          Assembling: D:\sourcesdk\Map-Labs-master\sp\src\public\tier0\pointeroverride.asm
+          Assembling: D:\sourcesdk\super-duper-resource-source-engine\sp\src\public\tier0\pointeroverride.asm
          Microsoft (R) Macro Assembler Version 12.00.40629.0
          Copyright (C) Microsoft Corporation.  All rights reserved.
          
+         Running VPC CRC Check - mdllib.vpc
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=mdllib /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\mdllib" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw mdllib.cpp mdllib_stripinfo.cpp mdllib_stripmodel.cpp mdllib_utils.cpp ..\public\tier0\memoverride.cpp
          mdllib.cpp
@@ -32,26 +33,26 @@
          ..\lib\public\tier1.lib
          ..\lib\public\vstdlib.lib
             Creating library .\Release\.\mdllib.lib and object .\Release\.\mdllib.exp
-         mdllib.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\mdllib\.\Release\.\mdllib.dll
+         mdllib.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\.\Release\.\mdllib.dll
        PostBuildEvent:
          if not exist "..\..\game\bin\." mkdir "..\..\game\bin\."
-         copy "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\Release\mdllib.dll" "..\..\game\bin\.\mdllib.dll"
+         copy "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\Release\mdllib.dll" "..\..\game\bin\.\mdllib.dll"
          if ERRORLEVEL 1 goto BuildEventFailed
-         if exist "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\Release\mdllib.map" copy "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\Release\mdllib.map" ..\..\game\bin\.\mdllib.map
-         copy "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\Release\mdllib.pdb" "..\..\game\bin\.\mdllib.pdb"
+         if exist "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\Release\mdllib.map" copy "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\Release\mdllib.map" ..\..\game\bin\.\mdllib.map
+         copy "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\Release\mdllib.pdb" "..\..\game\bin\.\mdllib.pdb"
          if ERRORLEVEL 1 goto BuildEventFailed
          goto BuildEventOK
          :BuildEventFailed
          echo *** ERROR! PostBuildStep FAILED for mdllib! EXE or DLL is probably running. ***
-         del /q "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\Release\mdllib.dll"
+         del /q "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\Release\mdllib.dll"
          exit 1
          :BuildEventOK
          
          :VCEnd
                  1 file(s) copied.
                  1 file(s) copied.
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\mdllib\mdllib.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdllib\mdllib.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.26
+Time Elapsed 00:00:06.40

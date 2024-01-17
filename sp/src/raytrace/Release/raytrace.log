@@ -1,5 +1,5 @@
-﻿Build started 12/23/2023 6:12:57 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\raytrace\raytrace.vcxproj" on node 3 (Rebuild target(s)).
+﻿Build started 1/17/2024 7:08:36 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\raytrace\raytrace.vcxproj" on node 5 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\lib\public\.\raytrace.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\raytrace.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
@@ -24,9 +24,9 @@
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\raytrace.lib" /NOLOGO  /ignore:4221 .\Release\.\/raytrace.obj
          .\Release\.\/trace2.obj
          .\Release\.\/trace3.obj
-         raytrace.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\raytrace\..\lib\public\.\raytrace.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\raytrace\raytrace.vcxproj" (Rebuild target(s)).
+         raytrace.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\raytrace\..\lib\public\.\raytrace.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\raytrace\raytrace.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:09.71
+Time Elapsed 00:00:09.94

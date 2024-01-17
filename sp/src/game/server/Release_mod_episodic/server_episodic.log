@@ -1,18 +1,29 @@
-﻿Build started 1/2/2024 11:08:16 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\game\server\server_episodic.vcxproj" on node 4 (Build target(s)).
+﻿Build started 1/17/2024 9:05:29 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\server_episodic.vcxproj" on node 3 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\..\..\game\mod_episodic\bin\.\server.dll for /f "delims=" %%A in ('attrib "..\..\..\game\mod_episodic\bin\.\server.dll"') do set valveTmpIsReadOnly="%%A"
          set valveTmpIsReadOnlyLetter=%valveTmpIsReadOnly:~6,1%
-         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\Map-Labs-master\sp\src\game\server\Release_mod_episodic\"server.dll
+         if "%valveTmpIsReadOnlyLetter%"=="R" del /q "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\Release_mod_episodic\"server.dll
          if exist "..\..\devtools\bin\vpc.exe" "..\..\devtools\bin\vpc.exe" -crc2 "server_episodic.vcxproj"
          if ERRORLEVEL 1 exit /b 1
          
          :VCEnd
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\..\game\server\generated_proto_mod_episodic /I"..\..\thirdparty\protobuf-2.3.0\src" /I.\ /I..\..\game\shared /I..\..\utils\common /I..\..\game\shared\econ /I..\..\game\server\NextBot /I..\..\game\shared\hl2 /I..\..\game\shared\episodic /I.\hl2 /I.\episodic /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=server /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D ASW_PROJECTED_TEXTURES /D DYNAMIC_RTT_SHADOWS /D GLOWS_ENABLE /D MAPBASE_VSCRIPT /D NEW_RESPONSE_SYSTEM /D HL2_PLAYER_TALKER /D GAME_DLL /D VECTOR /D VERSION_SAFE_STEAM_API_INTERFACES /D PROTECTED_THINGS_ENABLE /D sprintf=use_Q_snprintf_instead_of_sprintf /D strncpy=use_Q_strncpy_instead /D _snprintf=use_Q_snprintf_instead /D fopen=dont_use_fopen /D HL2_DLL /D HL2_EPISODIC /D USES_SAVERESTORE /D CSS_WEAPONS_IN_HL2 /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\game\server" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yu"cbase.h" /Fp".\Release_mod_episodic\server.pch" /Fo".\Release_mod_episodic\/" /Fd".\Release_mod_episodic\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw ai_basenpc.cpp
-         ai_basenpc.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\..\game\server\generated_proto_mod_episodic /I"..\..\thirdparty\protobuf-2.3.0\src" /I.\ /I..\..\game\shared /I..\..\utils\common /I..\..\game\shared\econ /I..\..\game\server\NextBot /I..\..\game\shared\hl2 /I..\..\game\shared\episodic /I.\hl2 /I.\episodic /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=server /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D ASW_PROJECTED_TEXTURES /D DYNAMIC_RTT_SHADOWS /D GLOWS_ENABLE /D MAPBASE_VSCRIPT /D NEW_RESPONSE_SYSTEM /D HL2_PLAYER_TALKER /D GAME_DLL /D VECTOR /D VERSION_SAFE_STEAM_API_INTERFACES /D PROTECTED_THINGS_ENABLE /D sprintf=use_Q_snprintf_instead_of_sprintf /D strncpy=use_Q_strncpy_instead /D _snprintf=use_Q_snprintf_instead /D fopen=dont_use_fopen /D HL2_DLL /D HL2_EPISODIC /D USES_SAVERESTORE /D CSS_WEAPONS_IN_HL2 /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\game\server" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Fo".\Release_mod_episodic\/" /Fd".\Release_mod_episodic\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw ..\..\public\bone_setup.cpp
-         bone_setup.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\common /I..\..\public /I..\..\public\tier0 /I..\..\public\tier1 /I..\..\game\server\generated_proto_mod_episodic /I"..\..\thirdparty\protobuf-2.3.0\src" /I.\ /I..\..\game\shared /I..\..\utils\common /I..\..\game\shared\econ /I..\..\game\server\NextBot /I..\..\game\shared\hl2 /I..\..\game\shared\episodic /I.\hl2 /I.\episodic /Zi /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _WINDLL /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D DLLNAME=server /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D ASW_PROJECTED_TEXTURES /D DYNAMIC_RTT_SHADOWS /D GLOWS_ENABLE /D MAPBASE_VSCRIPT /D NEW_RESPONSE_SYSTEM /D HL2_PLAYER_TALKER /D GAME_DLL /D VECTOR /D VERSION_SAFE_STEAM_API_INTERFACES /D PROTECTED_THINGS_ENABLE /D sprintf=use_Q_snprintf_instead_of_sprintf /D strncpy=use_Q_strncpy_instead /D _snprintf=use_Q_snprintf_instead /D fopen=dont_use_fopen /D HL2_DLL /D HL2_EPISODIC /D USES_SAVERESTORE /D CSS_WEAPONS_IN_HL2 /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\game\server" /D _DLL_EXT=.dll /D SOURCE1=1 /D VPCGAME=valve /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /Yu"cbase.h" /Fp".\Release_mod_episodic\server.pch" /Fo".\Release_mod_episodic\/" /Fd".\Release_mod_episodic\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /Zm200 /d2Zi+ /Gw ..\..\game\shared\achievement_saverestore.cpp ..\..\game\shared\achievementmgr.cpp ..\..\game\shared\achievements_hlx.cpp ..\..\game\shared\baseachievement.cpp ..\..\game\shared\episodic\achievements_ep1.cpp ..\..\game\shared\episodic\achievements_ep2.cpp ..\..\game\shared\episodic\achievements_epx.cpp ..\..\game\shared\hl2\hl2_gamerules.cpp basecombatcharacter.cpp episodic\npc_hunter.cpp gameinterface.cpp hl2\npc_manhack.cpp hl2\npc_zombine.cpp player.cpp
+         achievement_saverestore.cpp
+         achievementmgr.cpp
+         achievements_hlx.cpp
+         baseachievement.cpp
+         achievements_ep1.cpp
+         achievements_ep2.cpp
+         achievements_epx.cpp
+         hl2_gamerules.cpp
+         basecombatcharacter.cpp
+         npc_hunter.cpp
+         gameinterface.cpp
+         npc_manhack.cpp
+         npc_zombine.cpp
+         player.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release_mod_episodic\\server.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\..\lib\common\. /LIBPATH:..\..\lib\public\. shell32.lib user32.lib advapi32.lib gdi32.lib comdlg32.lib ole32.lib winmm.lib /NODEFAULTLIB:libc /NODEFAULTLIB:libcd /NODEFAULTLIB:libcmtd /MANIFEST:NO /DEBUG /PDB:".\Release_mod_episodic\/server.pdb" /SUBSYSTEM:WINDOWS,"5.01" /OPT:REF /OPT:NOICF /TLBID:1 /DYNAMICBASE:NO /NXCOMPAT /IMPLIB:".\Release_mod_episodic\server.lib" /MACHINE:X86 /SAFESEH:NO  /ignore:4221 /DLL .\Release_mod_episodic\\pointeroverride.obj
          .\Release_mod_episodic\/gamedll_replay.obj
@@ -674,26 +685,26 @@
          ..\..\lib\public\vscript.lib
          ..\..\lib\public\vstdlib.lib
             Creating library .\Release_mod_episodic\server.lib and object .\Release_mod_episodic\server.exp
-         server_episodic.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\game\server\.\Release_mod_episodic\server.dll
+         server_episodic.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\.\Release_mod_episodic\server.dll
        PostBuildEvent:
          if not exist "..\..\..\game\mod_episodic\bin\." mkdir "..\..\..\game\mod_episodic\bin\."
-         copy "D:\sourcesdk\Map-Labs-master\sp\src\game\server\Release_mod_episodic\server.dll" "..\..\..\game\mod_episodic\bin\.\server.dll"
+         copy "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\Release_mod_episodic\server.dll" "..\..\..\game\mod_episodic\bin\.\server.dll"
          if ERRORLEVEL 1 goto BuildEventFailed
-         if exist "D:\sourcesdk\Map-Labs-master\sp\src\game\server\Release_mod_episodic\server.map" copy "D:\sourcesdk\Map-Labs-master\sp\src\game\server\Release_mod_episodic\server.map" ..\..\..\game\mod_episodic\bin\.\server.map
-         copy "D:\sourcesdk\Map-Labs-master\sp\src\game\server\Release_mod_episodic\server.pdb" "..\..\..\game\mod_episodic\bin\.\server.pdb"
+         if exist "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\Release_mod_episodic\server.map" copy "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\Release_mod_episodic\server.map" ..\..\..\game\mod_episodic\bin\.\server.map
+         copy "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\Release_mod_episodic\server.pdb" "..\..\..\game\mod_episodic\bin\.\server.pdb"
          if ERRORLEVEL 1 goto BuildEventFailed
          goto BuildEventOK
          :BuildEventFailed
          echo *** ERROR! PostBuildStep FAILED for Server (Episodic)! EXE or DLL is probably running. ***
-         del /q "D:\sourcesdk\Map-Labs-master\sp\src\game\server\Release_mod_episodic\server.dll"
+         del /q "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\Release_mod_episodic\server.dll"
          exit 1
          :BuildEventOK
          
          :VCEnd
                  1 file(s) copied.
                  1 file(s) copied.
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\game\server\server_episodic.vcxproj" (Build target(s)).
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\game\server\server_episodic.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:32.93
+Time Elapsed 00:00:08.71

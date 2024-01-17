@@ -1,5 +1,5 @@
-﻿Build started 12/26/2023 8:57:00 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\mdlobjects\mdlobjects.vcxproj" on node 4 (Build target(s)).
+﻿Build started 1/17/2024 7:08:37 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdlobjects\mdlobjects.vcxproj" on node 11 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\lib\public\.\mdlobjects.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\mdlobjects.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
@@ -13,6 +13,26 @@
          if ERRORLEVEL 1 exit /b 1
          
          :VCEnd
+       CustomBuild:
+         Running VPC CRC Check - mdlobjects.vpc
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Z7 /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=mdlobjects /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MDLOBJECTS_LIB /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\mdlobjects" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /d2Zi+ /Gw dmeblankbodypart.cpp dmebodygroup.cpp dmebodygrouplist.cpp dmebodypart.cpp dmeboneflexdriver.cpp dmebonemask.cpp dmebonemasklist.cpp dmeboneweight.cpp dmecollisionmodel.cpp dmehitbox.cpp dmehitboxset.cpp dmelod.cpp dmelodlist.cpp dmemdllist.cpp dmesequence.cpp dmesequencelist.cpp
+         dmeblankbodypart.cpp
+         dmebodygroup.cpp
+         dmebodygrouplist.cpp
+         dmebodypart.cpp
+         dmeboneflexdriver.cpp
+         dmebonemask.cpp
+         dmebonemasklist.cpp
+         dmeboneweight.cpp
+         dmecollisionmodel.cpp
+         dmehitbox.cpp
+         dmehitboxset.cpp
+         dmelod.cpp
+         dmelodlist.cpp
+         dmemdllist.cpp
+         dmesequence.cpp
+         dmesequencelist.cpp
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\mdlobjects.lib" /NOLOGO  /ignore:4221 .\Release\.\/dmeblankbodypart.obj
          .\Release\.\/dmebodygroup.obj
@@ -30,9 +50,9 @@
          .\Release\.\/dmemdllist.obj
          .\Release\.\/dmesequence.obj
          .\Release\.\/dmesequencelist.obj
-         mdlobjects.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\mdlobjects\..\lib\public\.\mdlobjects.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\mdlobjects\mdlobjects.vcxproj" (Build target(s)).
+         mdlobjects.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdlobjects\..\lib\public\.\mdlobjects.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\mdlobjects\mdlobjects.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.72
+Time Elapsed 00:00:14.24

@@ -40,6 +40,10 @@ skymask_vsxx.fxc-----skymask_vs20
 sunrays_calc_ps20b.fxc-----sunrays_calc_ps20b
 sunrays_calc_vsxx.fxc-----sunrays_calc_vs11
 sunrays_calc_vsxx.fxc-----sunrays_calc_vs20
+gaussianx_ps2x.fxc-----gaussianx_ps20
+gaussianx_ps2x.fxc-----gaussianx_ps20b
+gaussiany_ps2x.fxc-----gaussiany_ps20
+gaussiany_ps2x.fxc-----gaussiany_ps20b
 object_motion_blur_vs20.fxc-----object_motion_blur_vs20
 object_motion_blur_ps2x.fxc-----object_motion_blur_ps20
 object_motion_blur_ps2x.fxc-----object_motion_blur_ps20b

@@ -1,5 +1,5 @@
-﻿Build started 1/2/2024 11:08:16 PM.
-     1>Project "D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\movieobjects.vcxproj" on node 2 (Build target(s)).
+﻿Build started 1/17/2024 7:08:37 PM.
+     1>Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\movieobjects\movieobjects.vcxproj" on node 10 (Build target(s)).
      1>PreBuildEvent:
          if EXIST ..\lib\public\.\movieobjects.lib ( for /f "delims=" %%A in ('attrib "..\lib\public\.\movieobjects.lib"') do set valveTmpIsReadOnly="%%A"
          ) else ( if not EXIST ..\lib\public\. mkdir ..\lib\public\. )
@@ -13,9 +13,71 @@
          if ERRORLEVEL 1 exit /b 1
          
          :VCEnd
+       CustomBuild:
+         Running VPC CRC Check - movieobjects.vpc
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Z7 /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=movieobjects /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MOVIEOBJECTS_LIB /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\movieobjects" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /d2Zi+ /Gw ..\public\bone_setup.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\common /I..\public /I..\public\tier0 /I..\public\tier1 /Z7 /nologo /W4 /WX /MP /O2 /Ob2 /Oi /Ot /Oy- /D VPC /D RAD_TELEMETRY_DISABLED /D MAPBASE /D WIN32 /D _WIN32 /D NDEBUG /D _LIB /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _ALLOW_RUNTIME_LIBRARY_MISMATCH /D _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH /D _ALLOW_MSC_VER_MISMATCH /D _USING_V110_SDK71_ /D _MBCS /D COMPILER_MSVC32 /D COMPILER_MSVC32 /D COMPILER_MSVC /D _DLL_EXT=.dll /D LIBNAME=movieobjects /D BINK_VIDEO /D AVI_VIDEO /D WMV_VIDEO /D DEV_BUILD /D FRAME_POINTER_OMISSION_DISABLED /D MOVIEOBJECTS_LIB /D _EXTERNAL_DLL_EXT=.dll /D VPCGAMECAPS=VALVE /D "PROJECTDIR=D:\sourcesdk\Map-Labs-master\sp\src\movieobjects" /D _DLL_EXT=.dll /D VPCGAME=valve /D SOURCE1=1 /GF /Gm- /MT /GS /Gy /arch:SSE /fp:fast /Zc:wchar_t /Zc:forScope /GR /openmp- /Fo".\Release\.\/" /Fd".\Release\.\/vc120.pdb" /Gd /TP /wd4316 /analyze- /FC /errorReport:prompt /d2Zi+ /Gw ..\public\bone_setup.cpp ..\public\collisionutils.cpp ..\public\phonemeconverter.cpp ..\public\studio.cpp dmeanimationlist.cpp dmeanimationset.cpp dmeattachment.cpp dmebalancetostereocalculatoroperator.cpp dmebookmark.cpp dmecamera.cpp dmechannel.cpp dmeclip.cpp dmecombinationoperator.cpp dmedag.cpp dmedccmakefile.cpp dmedrawsettings.cpp dmeeditortypedictionary.cpp dmeexpressionoperator.cpp dmeeyeball.cpp dmeeyeposition.cpp dmefaceset.cpp dmegamemodel.cpp dmegamemodelinput.cpp dmeinput.cpp dmejoint.cpp dmekeyboardinput.cpp dmelight.cpp dmelog.cpp dmemakefile.cpp dmemakefileutils.cpp dmematerial.cpp dmematerialoverlayfxclip.cpp dmemdl.cpp dmemdlmakefile.cpp dmemesh.cpp dmemodel.cpp dmemorphoperator.cpp dmemouseinput.cpp dmeoperator.cpp dmepackoperators.cpp dmeparticlesystemdefinition.cpp dmephonememapping.cpp dmeselection.cpp dmeshape.cpp dmesound.cpp dmetimeframe.cpp dmetimeselection.cpp dmetrack.cpp dmetrackgroup.cpp dmetransform.cpp dmetransforminput.cpp dmetransformlist.cpp dmetransformoperator.cpp dmeunpackoperators.cpp dmevertexdata.cpp dmmeshcomp.cpp dmmeshutils.cpp dmobjserializer.cpp dmsmdserializer.cpp movieobjects_interfaces.cpp ..\common\movieobjects\timeutils.cpp
          bone_setup.cpp
+         collisionutils.cpp
+         phonemeconverter.cpp
+         studio.cpp
+         dmeanimationlist.cpp
+         dmeanimationset.cpp
+         dmeattachment.cpp
+         dmebalancetostereocalculatoroperator.cpp
+         dmebookmark.cpp
+         dmecamera.cpp
+         dmechannel.cpp
+         dmeclip.cpp
+         dmecombinationoperator.cpp
+         dmedag.cpp
+         dmedccmakefile.cpp
+         dmedrawsettings.cpp
+         dmeeditortypedictionary.cpp
+         dmeexpressionoperator.cpp
+         dmeeyeball.cpp
+         dmeeyeposition.cpp
+         dmefaceset.cpp
+         dmegamemodel.cpp
+         dmegamemodelinput.cpp
+         dmeinput.cpp
+         dmejoint.cpp
+         dmekeyboardinput.cpp
+         dmelight.cpp
+         dmelog.cpp
+         dmemakefile.cpp
+         dmemakefileutils.cpp
+         dmematerial.cpp
+         dmematerialoverlayfxclip.cpp
+         dmemdl.cpp
+         dmemdlmakefile.cpp
+         dmemesh.cpp
+         dmemodel.cpp
+         dmemorphoperator.cpp
+         dmemouseinput.cpp
+         dmeoperator.cpp
+         dmepackoperators.cpp
+         dmeparticlesystemdefinition.cpp
+         dmephonememapping.cpp
+         dmeselection.cpp
+         dmeshape.cpp
+         dmesound.cpp
+         dmetimeframe.cpp
+         dmetimeselection.cpp
+         dmetrack.cpp
+         dmetrackgroup.cpp
+         dmetransform.cpp
+         dmetransforminput.cpp
+         dmetransformlist.cpp
+         dmetransformoperator.cpp
+         dmeunpackoperators.cpp
+         dmevertexdata.cpp
+         dmmeshcomp.cpp
+         dmmeshutils.cpp
+         dmobjserializer.cpp
+         dmsmdserializer.cpp
+         movieobjects_interfaces.cpp
+         timeutils.cpp
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"..\lib\public\.\movieobjects.lib" /NOLOGO  /ignore:4221 .\Release\.\/bone_setup.obj
          .\Release\.\/collisionutils.obj
@@ -78,9 +140,9 @@
          .\Release\.\/dmsmdserializer.obj
          .\Release\.\/movieobjects_interfaces.obj
          .\Release\.\/timeutils.obj
-         movieobjects.vcxproj -> D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\..\lib\public\.\movieobjects.lib
-     1>Done Building Project "D:\sourcesdk\Map-Labs-master\sp\src\movieobjects\movieobjects.vcxproj" (Build target(s)).
+         movieobjects.vcxproj -> D:\sourcesdk\super-duper-resource-source-engine\sp\src\movieobjects\..\lib\public\.\movieobjects.lib
+     1>Done Building Project "D:\sourcesdk\super-duper-resource-source-engine\sp\src\movieobjects\movieobjects.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:02.43
+Time Elapsed 00:00:17.88
